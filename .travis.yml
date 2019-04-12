@@ -1,0 +1,23 @@
+# Clean and don't fail, then download and install Hugo version 0.55.0
+install:
+  - rm -rf public || exit 0
+  - wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.55.0/hugo_0.55.0_Linux-64bit.deb
+  - sudo dpkg -i /tmp/hugo.deb
+
+# Build the website using Hugo
+script:
+  - hugo
+
+branches:
+  only:
+    - master
+
+# Deploy to GitHub pages
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: public
+  target_branch: gh-pages
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: master

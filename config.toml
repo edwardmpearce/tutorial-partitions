@@ -1,0 +1,168 @@
+# Configuration of Hugo-theme-learn
+# Documentation: https://learn.netlify.com/en/basics/configuration/
+#
+# This file is formatted using TOML syntax - learn more at https://learnxinyminutes.com/docs/toml/
+# Each configuration section is defined by a name in square brackets (e.g. `[outputs]`).
+
+# The URL of your site.
+# End your URL with a `/` trailing slash, e.g. `https://example.com/`.
+baseurl = "https://edwardmpearce.github.io/tutorial-partitions/"
+
+# Title of your site
+title = "Integer Partitions Tutorial - Edward Pearce"
+
+# Enter a copyright notice to display in the site footer.
+# To display a copyright symbol, type `&copy;`. For current year, type `{year}`.
+copyright = "Copyright &copy; Edward Pearce {year}"
+
+# Name of Hugo-theme-learn theme folder in `themes/`.
+theme = "hugo-theme-learn"
+themesdir = "../.."
+
+# Default language to use (if you setup multilingual support)
+defaultContentLanguage = "en"
+hasCJKLanguage = false  # Set `true` for Chinese/Japanese/Korean languages.
+defaultContentLanguageInSubdir = false
+
+# Enable analytics by entering your Google Analytics tracking ID
+googleAnalytics = ""
+
+# Get last modified date for content from Git?
+enableGitInfo = true
+
+paginate = 10  # Number of items per page in paginated lists.
+enableEmoji = true
+footnotereturnlinkcontents = "<sup>^</sup>"
+ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+preserveTaxonomyNames = true
+metaDataFormat = "yaml"
+
+[outputs]
+  home = [ "HTML", "CSS", "RSS", "JSON" ]
+  section = [ "HTML", "RSS" ]
+
+# Configure BlackFriday Markdown rendering.
+#   See: https://gohugo.io/getting-started/configuration/#configure-blackfriday
+[blackfriday]
+  hrefTargetBlank = true  # `true` opens external links in a new tab. See https://github.com/gohugoio/hugo/issues/2424
+  fractions = true  # `false` disables smart fractions (e.g. 5/12 formatted as a fraction).
+  smartypants = true  # `false` disables all smart punctuation substitutions (e.g. smart quotes, dashes, fractions).
+  angledQuotes = false
+  latexDashes = true
+  extensions = ["backslashLineBreak"]
+
+[imaging]
+  resampleFilter = "lanczos"
+  quality = 90
+  anchor = "smart"  # Anchor for cropping. Options include Smart and Center.
+
+# Taxonomies.
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+############################
+## Site Setup             ##
+############################ 
+[params] 
+  # Prefix URL to edit current page. Will display an "Edit this page" button on top right hand corner of every page. 
+  # Useful to give opportunity to people to create merge request for your doc.
+  editURL = "https://github.com/edwardmpearce/tutorial-partitions/edit/master/content/"
+  
+  # Description for social sharing and search engines. If undefined, superuser role is used in place.
+  description = "Integer Partitions Tutorial"
+  
+  # Author of the site, will be used in meta information
+  author = "Edward Pearce"
+  
+  # Shows a checkmark for visited pages on the menu
+  showVisitedLinks = false
+  
+  # Hide breadcrumbs in the header and only show the current page title
+  disableBreadcrumb = false
+  
+  # Hide Next and Previous page buttons normally displayed full height beside content
+  disableNextPrev = false
+
+  # Order sections in menu by "weight" or "title". Default to "weight"
+  ordersectionsby = "weight"
+  
+  # Change default color scheme with a variant one. Can be "red", "blue", "green".
+  themeVariant = ""
+  
+  # Enable global source code highlighting? true/false
+  highlight = true
+  # highlight_languages = ["r"]  # Add support for highlighting additional languages
+  highlight_style = "solarized-dark"  # For supported styles, see https://cdnjs.com/libraries/highlight.js/
+
+  # Enable global LaTeX math rendering?
+  #   If false, you can enable it locally on a per page basis.
+  math = true
+
+  # Show estimated reading time for posts? (true/false)
+  reading_time = true
+
+  
+############################
+## Menus                  ##
+############################
+# You can define additional menu entries or shortcuts in the navigation menu without any link to content.
+# The weight parameter defines the order that the links will appear in.
+
+[[menu.shortcuts]] 
+name = "<i class='fab fa-github'></i> Github repo"
+identifier = "ds"
+url = "https://github.com/edwardmpearce/tutorial-partitions/"
+weight = 10
+
+# [[menu.shortcuts]]
+# name = "<i class='fas fa-bookmark'></i> Hugo Documentation"
+# identifier = "hugodoc"
+# url = "https://gohugo.io/"
+# weight = 20
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-bullhorn'></i> Credits"
+url = "https://edwardmpearce.github.io/"
+weight = 30
+  
+
+############################
+## Languages              ##
+############################  
+[languages]
+#   Create a `[languages.X]` block for each language you want, where X is the language ID.
+#   Refer to https://learn.netlify.com/en/cont/i18n/
+
+# Configure the English version of the site.
+  [languages.en]
+    languageCode = "en-us"
+    contentDir = "content/en"
+  
+# Configure the Chinese version of the site.
+  [languages.zh]
+    languageCode = "zh-Hans"
+    contentDir = "content/zh"
+    title = "Integer Partitions Tutorial - 罗毅华"
+	
+    [languages.zh.params]
+      description = "Integer Partitions Tutorial"
+	  # Display name
+      author = "罗毅华" 
+
+    [[languages.zh.menu.shortcuts]] 
+    name = "<i class='fab fa-github'></i> Github repo"
+    identifier = "ds"
+    url = "https://github.com/edwardmpearce/tutorial-partitions/"
+    weight = 10
+
+    # [[languages.zh.menu.shortcuts]]
+    # name = "<i class='fas fa-bookmark'></i> Hugo Documentation"
+    # identifier = "hugodoc"
+    # url = "https://gohugo.io/"
+    # weight = 20
+
+    [[languages.zh.menu.shortcuts]]
+    name = "<i class='fas fa-bullhorn'></i> Credits"
+    url = "https://edwardmpearce.github.io/"
+    weight = 30
