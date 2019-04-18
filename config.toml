@@ -17,12 +17,11 @@ copyright = "Copyright &copy; Edward Pearce {year}"
 
 # Name of Hugo-theme-learn theme folder in `themes/`.
 theme = "hugo-theme-learn"
-themesdir = "../.."
 
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "en"
 hasCJKLanguage = false  # Set `true` for Chinese/Japanese/Korean languages.
-defaultContentLanguageInSubdir = false
+defaultContentLanguageInSubdir = true
 
 # Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = ""
@@ -38,8 +37,7 @@ preserveTaxonomyNames = true
 metaDataFormat = "yaml"
 
 [outputs]
-  home = [ "HTML", "CSS", "RSS", "JSON" ]
-  section = [ "HTML", "RSS" ]
+  home = [ "HTML", "RSS", "JSON" ]
 
 # Configure BlackFriday Markdown rendering.
 #   See: https://gohugo.io/getting-started/configuration/#configure-blackfriday
@@ -77,6 +75,9 @@ metaDataFormat = "yaml"
   
   # Shows a checkmark for visited pages on the menu
   showVisitedLinks = false
+  
+  # When using multilingual website, disable the switch language button.
+  disableLanguageSwitchingButton = true
   
   # Hide breadcrumbs in the header and only show the current page title
   disableBreadcrumb = false
@@ -140,21 +141,21 @@ weight = 30
     contentDir = "content/en"
   
 # Configure the Chinese version of the site.
-  [languages.zh]
-    languageCode = "zh-Hans"
-    contentDir = "content/zh"
-    title = "Integer Partitions Tutorial - 罗毅华"
+#  [languages.zh]
+#    languageCode = "zh-Hans"
+#    contentDir = "content/zh"
+#    title = "Integer Partitions Tutorial - 罗毅华"
 	
-    [languages.zh.params]
-      description = "Integer Partitions Tutorial"
+#    [languages.zh.params]
+#      description = "Integer Partitions Tutorial"
 	  # Display name
-      author = "罗毅华" 
+#      author = "罗毅华" 
 
-    [[languages.zh.menu.shortcuts]] 
-    name = "<i class='fab fa-github'></i> Github repo"
-    identifier = "ds"
-    url = "https://github.com/edwardmpearce/tutorial-partitions/"
-    weight = 10
+#    [[languages.zh.menu.shortcuts]] 
+#    name = "<i class='fab fa-github'></i> Github repo"
+#    identifier = "ds"
+#    url = "https://github.com/edwardmpearce/tutorial-partitions/"
+#    weight = 10
 
     # [[languages.zh.menu.shortcuts]]
     # name = "<i class='fas fa-bookmark'></i> Hugo Documentation"
@@ -162,7 +163,7 @@ weight = 30
     # url = "https://gohugo.io/"
     # weight = 20
 
-    [[languages.zh.menu.shortcuts]]
-    name = "<i class='fas fa-bullhorn'></i> Credits"
-    url = "https://edwardmpearce.github.io/"
-    weight = 30
+#    [[languages.zh.menu.shortcuts]]
+#    name = "<i class='fas fa-bullhorn'></i> Credits"
+#    url = "https://edwardmpearce.github.io/"
+#    weight = 30
