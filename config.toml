@@ -126,6 +126,11 @@ weight = 10
 name = "<i class='fas fa-bullhorn'></i> Credits"
 url = "https://edwardmpearce.github.io/"
 weight = 30
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-heart'></i> Donate"
+url = "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=R226X2KQPU564&currency_code=GBP&source=url"
+weight = 40
   
 
 ############################
