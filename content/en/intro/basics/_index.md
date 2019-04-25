@@ -20,15 +20,15 @@ With this in mind, we begin with the following definitions:
 
 ## First Definitions
 
-A partition is a finite nonincreasing sequence of positive integers, often denoted by symbols such as $\lambda$, $\mu$, or $p$. 
+A **partition** is a finite nonincreasing sequence of positive integers, often denoted by symbols such as $\lambda$, $\mu$, or $p$. 
 
 In other words, if $\lambda$ is a partition, then it can be viewed as a function $\lambda:\mathbb{Z}\_{>0}\to\mathbb{Z}\_{>0}$ such that $\lambda(i)\ge\lambda(j)$ for all $i\le j$, and there is some $M\in\mathbb{Z}\_{>0}$ such that $\lambda(i)=0$ for all $i\ge M$.
 
-We may express the data stored in a partition by writing out the finite sequence as $\lambda=(\lambda\_{1},\lambda\_{2},\ldots,\lambda\_{k})$ with $\lambda\_{1}\ge\lambda\_{2}\ge\ldots\ge\lambda\_{k}>0$. These $\lambda\_{i}$ are called the parts of the partition $\lambda$.
+We may express the data stored in a partition by writing out the finite sequence as $\lambda=(\lambda\_{1},\lambda\_{2},\ldots,\lambda\_{k})$ with $\lambda\_{1}\ge\lambda\_{2}\ge\ldots\ge\lambda\_{k}>0$. These $\lambda\_{i}$ are called the **parts** of the partition $\lambda$.
 
-We define the size of a partition $\lambda$ to be the sum of its parts. That is, $\mathrm{size}(\lambda):=\sum\_{i=1}^{\infty}\lambda(i)=\sum\_{i=1}^{k}\lambda\_{i}$. We say that $\lambda$ is a partition of $n$, and write $\lambda\vdash n$, where $n=\mathrm{size}(\lambda)$.
+We define the **size** of a partition $\lambda$ to be the sum of its parts. That is, $\mathrm{size}(\lambda):=\sum\_{i=1}^{\infty}\lambda(i)=\sum\_{i=1}^{k}\lambda\_{i}$. We say that $\lambda$ is a partition of $n$, and write $\lambda\vdash n$, where $n=\mathrm{size}(\lambda)$.
 
-We define the length of a partition $\lambda$ to be the number of nonzero parts in $\lambda$. That is, $\mathrm{length}(\lambda):=\max\\{i\in\mathbb{Z}\_{>0}|\lambda(i)\ne0\\}$. For $\lambda=(\lambda\_{1},\lambda\_{2},\ldots,\lambda\_{k})$ with $\lambda\_{1}\ge\lambda\_{2}\ge\ldots\ge\lambda\_{k}>0$, we have $\mathrm{length}(\lambda)=k$.
+We define the **length** of a partition $\lambda$ to be the number of nonzero parts in $\lambda$. That is, $\mathrm{length}(\lambda):=\max\\{i\in\mathbb{Z}\_{>0}|\lambda(i)\ne0\\}$. For $\lambda=(\lambda\_{1},\lambda\_{2},\ldots,\lambda\_{k})$ with $\lambda\_{1}\ge\lambda\_{2}\ge\ldots\ge\lambda\_{k}>0$, we have $\mathrm{length}(\lambda)=k$.
 
 ## Exercise
 
