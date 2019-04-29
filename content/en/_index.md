@@ -22,15 +22,13 @@ If you want to learn more about the multitude of other uses of SageMath for math
 [online]: https://sagecell.sagemath.org
 [in the cloud]: https://cocalc.com
 [tutorial]: https://doc.sagemath.org/html/en/reference/combinat/sage/combinat/tutorial.html#partitions-of-integers
-[documentation]: https://doc.sagemath.org/html/en/reference/combinat/sage/combinat/partition.html#sage-combinat-partition)
-[source]: https://github.com/sagemath/sage/blob/master/src/sage/combinat/partition.py))
+[documentation]: https://doc.sagemath.org/html/en/reference/combinat/sage/combinat/partition.html#sage-combinat-partition
+[source]: https://github.com/sagemath/sage/blob/master/src/sage/combinat/partition.py
 [extensive documentation]: https://doc.sagemath.org/html/en/index.html
 
 ## Contribute to this documentation
 Feel free to update this content, just click the **Edit this page** link displayed on top right of each page, and make a pull request.
 
 {{% notice note %}}
-Hi! My name is Edward and I am the author of this tutorial. If you want to find out more about me or get in touch, you can check out my [personal website][1]. If you like what you are reading please [consider donating][2]. It takes time to produce quality content and donations keep me motivated 😊
-[1]: https://edwardmpearce.github.io
-[2]: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=R226X2KQPU564&currency_code=GBP&source=url
+Hi! My name is Edward and I am the author of this tutorial. If you want to find out more about me or get in touch, you can check out my [personal website](https://edwardmpearce.github.io). If you like what you are reading please consider donating (link in menu) so I can continue creating educational content.
 {{% /notice %}}
