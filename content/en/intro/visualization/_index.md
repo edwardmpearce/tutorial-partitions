@@ -117,6 +117,28 @@ The conjugate of the partition $\lambda$ is the partition $\lambda'$ obtained by
 
 For example, if $\lambda = (6,3,1)$, then its conjugate is given by $\lambda'=(3, 2, 2, 1, 1, 1)$.
 
+<script type="text/tikz">
+  \begin{tikzpicture}
+    \begin{scope}[shift={(-7,0)}, local bounding box=scope1]
+      \draw (0,0) -- (6,0);\draw (0,-1) -- (6,-1);\draw (0,-2) -- (3,-2);\draw (0,-3) -- (1,-3);\draw (1,0) -- (1,-3);\draw (2,0) -- (2,-2);\draw (3,0) -- (3,-2);\draw (4,0) -- (4,-1);\draw (5,0) -- (5,-1);\draw (6,0) -- (6,-1);\draw (0,0) -- (0,-3);
+    \end{scope}
+    \begin{scope}[font=\Large, shift={(scope1.north)}]
+	  \draw (0,0.5) node{$\lambda = (6,3,1)$};
+    \end{scope}
+    \begin{scope}[shift={(5,0)}, local bounding box=scope2]
+      \draw (0,0) -- (3,0);\draw (0,-1) -- (3,-1);\draw (0,-2) -- (2,-2);\draw (0,-3) -- (2,-3);\draw (0,-4) -- (1,-4);\draw (0,-5) -- (1,-5);\draw (0,-6) -- (1,-6);\draw (1,0) -- (1,-6);\draw (2,0) -- (2,-3);\draw (3,0) -- (3,-1);\draw (0,0) -- (0,-6);
+    \end{scope}
+    \begin{scope}[font=\Large, shift={(scope2.north)}]
+      \draw (0,0.5) node{$\lambda'=(3, 2, 2, 1, 1, 1)$};
+    \end{scope}
+    \begin{scope}[font=\Large, shift={(0,-2)}]
+      \draw (2, 1) node{conjugation};
+      \draw[->] (0,0.5) -- (4,0.5);
+      \draw[->] (4,0) -- (0,0);
+	\end{scope}
+  \end{tikzpicture}
+</script>
+
 We can calculate the conjugate of a partition in SageMath using the `conjugate()` method or the helper function of the same name.
 
 ```python
