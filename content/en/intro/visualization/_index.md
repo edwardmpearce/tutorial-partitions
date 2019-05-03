@@ -113,7 +113,7 @@ Sometimes we will use a convention obtained by rotating a diagram drawn using En
 
 ## Conjugation
 
-The conjugate of the partition $\lambda$ is the partition $\lambda'$ obtained by swapping the rows and columns in the Young diagram. Formally, $\lambda'(j):=|\\{i:\lambda(i)\ge j\\}|$ for each $j\in \mathbb{Z}\_{>0}$. This is also called the associated partition or the transpose in the literature.
+The **conjugate** of the partition $\lambda$ is the partition $\lambda'$ obtained by swapping the rows and columns in the Young diagram. Formally, $\lambda'(j):=|\\{i:\lambda(i)\ge j\\}|$ for each $j\in \mathbb{Z}\_{>0}$. This is also called the associated partition or the transpose in the literature.
 
 For example, if $\lambda = (6,3,1)$, then its conjugate is given by $\lambda'=(3, 2, 2, 1, 1, 1)$.
 
