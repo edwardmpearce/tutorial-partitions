@@ -89,11 +89,9 @@ We will introduce three other ways to draw Young diagrams: French notation, Russ
 
 <script type="text/tikz">
   \begin{tikzpicture}
-    \begin{scope}[rotate=135]
-    \draw (0,0) -- (6,0);\draw (0,-1) -- (6,-1);\draw (0,-2) -- (3,-2);\draw (0,-3) -- (1,-3);\draw (1,0) -- (1,-3);\draw (2,0) -- (2,-2);\draw (3,0) -- (3,-2);\draw (4,0) -- (4,-1);\draw (5,0) -- (5,-1);\draw (6,0) -- (6,-1);\draw (0,0) -- (0,-3);
-	\end{scope}
-	\begin{scope}[scale=1.4142, font=\Large]
-	  \draw (-1, 1.5) node{s};\draw (-0.5, 2) node{t};
+    \begin{scope}[scale=0.7071, font=\Large]
+	\draw (0,0) -- (-6,6);\draw (1,1) -- (-5,7);\draw (1, 0) node{6};\draw (2,2) -- (-1,5);\draw (2, 1) node{3};\draw (3,3) -- (2,4);\draw (3, 2) node{1};\draw (0,0) -- (3,3);\draw (-1,1) -- (2,4);\draw (-2,2) -- (0,4);\draw (-3,3) -- (-1,5);\draw (-4,4) -- (-3,5);\draw (-5,5) -- (-4,6);\draw (-6,6) -- (-5,7);
+	\draw (-2, 3) node{s};\draw (-1, 4) node{t};
 	\end{scope}
   \end{tikzpicture}
 </script>
