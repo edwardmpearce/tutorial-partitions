@@ -47,15 +47,26 @@ p.size() # Equal to sum(p)
 p.length() # Equal to len(p)
 ```
 
+We can access the parts of a partition in the same way we would for a Python `list`, either by indexing or slicing, or we can use the `get_part()` method. Note that in Python/SageMath indices are $0$-based (i.e. indices start from $0$ instead of $1$).
+
+```python
+mu = Partition([6,4,4,2,1])
+mu.get_part(0), mu.get_part(1), mu.get_part(2), mu.get_part(3), mu.get_part(4), mu.get_part(5)
+# (6, 4, 4, 2, 1, 0)
+mu[1:4] # Slice from index 1 (inclusive) to index 4 (exclusive)
+# [4, 4, 2]
+```
+
 You can practice executing SageMath and Python code in the SageMathCell below.
 
 <div class="sage">
   <script type="text/x-sage">
 p = Partition([6,3,1]) # You can edit this code yourself
-print("My partition p = {} has size(p) = {} and length(p) = {}".format(
+print("My partition p = {0} has size(p) = {1} and length(p) = {2}".format(
 p, p.size(), p.length()))
+mu = Partition([6,4,4,2,1])
+print(mu.get_part(0), mu.get_part(3), mu.get_part(4), mu.get_part(5))
 print(p.size() == sum(p))
-print(p.length() == len(p))
   </script>
 </div>
 
