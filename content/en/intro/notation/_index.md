@@ -49,7 +49,7 @@ The **Frobenius rank** of a partition $\lambda$ is given by the number of cells 
 <script type="text/tikz">
   \begin{tikzpicture}
     \begin{scope}[local bounding box=scope1]
-	  \filldraw[red!5] (0,0) rectangle (1,-1);\filldraw[red!5] (1,-1) rectangle (2,-2);\filldraw[red!5] (2,-2) rectangle (3,-3);
+	  \filldraw[blue!5] (0,0) rectangle (1,-1);\filldraw[blue!5] (1,-1) rectangle (2,-2);\filldraw[blue!5] (2,-2) rectangle (3,-3);
       \draw (0,0) -- (6,0);\draw (0,-1) -- (6,-1);\draw (0,-2) -- (4,-2);\draw (0,-3) -- (4,-3);\draw (0,-4) -- (2,-4);\draw (0,-5) -- (1,-5);\draw (1,0) -- (1,-5);\draw (2,0) -- (2,-4);\draw (3,0) -- (3,-3);\draw (4,0) -- (4,-3);\draw (5,0) -- (5,-1);\draw (6,0) -- (6,-1);\draw (0,0) -- (0,-5);
 	\end{scope}
     \begin{scope}[font=\Large, shift={(0.5,-0.5)}]
@@ -60,13 +60,29 @@ The **Frobenius rank** of a partition $\lambda$ is given by the number of cells 
 
 We can obtain the Frobenius rank for a given partition in SageMath using the `frobenius_rank()` method.
 
-The **Frobenius coordinates** of a partition $\lambda$ of Frobenius rank $r$ is a pair of length-$r$ vectors $p,q$ given by listing the _arm_ and _leg_ statistics, respectively, of the cells along the main diagonal in $\lambda$. That is, for $i=1,2,\ldots,r$
+The **Frobenius coordinates** of a partition $\lambda$ of Frobenius rank $r$ is a pair of length-$r$ vectors $p,q$ given by listing the [arm and leg](../visualization/#arms-legs-and-hooks) statistics, respectively, of the cells along the main diagonal in $\lambda$. That is, for $i=1,2,\ldots,r$
 
-$$p\_{i}=a(i,i),q\_{i}=l(i,i)$$ 
+$$p\_{i}=a\_{\lambda}(i,i),q\_{i}=l\_{\lambda}(i,i).$$ 
 
-where $a(s)=\mathrm{arm}(s),l(s)=\mathrm{leg}(s)$ are the arm and leg statistics. We also discuss the arm and leg lengths on the next page.
+For example, the diagram below illustrates how to obtain the Frobenius coordinates $p=(5,2,1)$, $q=(4,2,0)$ from the partition $\lambda = (6,4,4,2,1)$:
 
-We can obtain the Frobenius coordinates for a given partition in SageMath using the `frobenius_coordinates()` method, and we can construct a partition from its exponential form using the `frobenius_coordinates` keyword argument in the constructor.
+<script type="text/tikz">
+  \begin{tikzpicture}
+    \begin{scope}
+	  \filldraw[blue!5] (0,0) rectangle (1,-1);\filldraw[blue!5] (1,-1) rectangle (2,-2);\filldraw[blue!5] (2,-2) rectangle (3,-3);
+      \filldraw[red!15] (1,0) rectangle (6,-1);\filldraw[red!15] (2,-1) rectangle (4,-2);\filldraw[red!15] (3,-2) rectangle (4,-3);
+	  \filldraw[green!15] (0,-1) rectangle (1,-5);\filldraw[green!15] (1,-2) rectangle (2,-4);
+	\end{scope}
+	\begin{scope}[black!20]
+	  \draw (0,0) -- (6,0);\draw (0,-1) -- (6,-1);\draw (0,-2) -- (4,-2);\draw (0,-3) -- (4,-3);\draw (0,-4) -- (2,-4);\draw (0,-5) -- (1,-5);\draw (1,0) -- (1,-5);\draw (2,0) -- (2,-4);\draw (3,0) -- (3,-3);\draw (4,0) -- (4,-3);\draw (5,0) -- (5,-1);\draw (6,0) -- (6,-1);\draw (0,0) -- (0,-5);
+    \end{scope}
+	\begin{scope}[font=\Large, local bounding box=scope1]  
+	  \draw (0,0) -- (6,0);\draw (0,0) -- (0,-5);\draw (6,0) -- (6,-1);\draw (0,-1) -- (6,-1);\draw (0,-5) -- (1,-5);\draw (1,0) -- (1,-5);\draw (3.5, -0.5) node{5};\draw (0.5, -3.0) node{4};\draw (4,-1) -- (4,-2);\draw (1,-2) -- (4,-2);\draw (1,-4) -- (2,-4);\draw (2,-1) -- (2,-4);\draw (3.0, -1.5) node{2};\draw (1.5, -3.0) node{2};\draw (4,-2) -- (4,-3);\draw (2,-3) -- (4,-3);\draw (2,-3) -- (3,-3);\draw (3,-2) -- (3,-3);\draw (3.5, -2.5) node{1};\draw (2.5, -3.5) node{0};
+    \end{scope}
+  \end{tikzpicture}
+</script>
+
+We can obtain the Frobenius coordinates for a given partition in SageMath using the `frobenius_coordinates()` method, and we can also construct a partition using the `frobenius_coordinates` keyword argument in the constructor.
 
 ```python
 Partition([6,4,4,2,1]).frobenius_coordinates()
