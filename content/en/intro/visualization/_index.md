@@ -72,11 +72,16 @@ For example, if $\lambda = (6,3,1)$, then its conjugate is given by $\lambda'=(3
   \end{tikzpicture}
 </script>
 
+1. Notice that conjugation is a size-preserving operation on the set of partitions. That is, $\mathrm{size}(\lambda')=\mathrm{size}(\lambda)$.
+2. Notice that if we take the conjugate of a partition twice we get back the partition we started with. That is, $(\lambda^\prime)^\prime=\lambda$. Therefore conjugation is what is known as an involution, i.e. a self-inverse function, on the set of partitions.
+
 We can calculate the conjugate of a partition in SageMath using the `conjugate()` method or the helper function of the same name.
 
 ```python
 Partition([5,5,3,2,1]).conjugate() # Same as conjugate(Partition([5,5,3,2,1])) 
 # [5, 4, 3, 2, 2]
+Partition([5,5,3,2,1]).conjugate().conjugate() # Same as conjugate(Partition([5, 4, 3, 2, 2]))
+# [5, 5, 3, 2, 1]
 ```
 
 ## Cells
@@ -102,6 +107,8 @@ Partition([6,3,1]).cells()
 ```
 
 It should be clear that the size of a partition $\lambda$ is equal to the number of cells in its Young diagram, that is $\mathrm{size}(\lambda) = |\mathrm{Young}(\lambda)|$, and that we can recover the parts of a partition from its Young diagram by counting the number of cells in the corresponding row: $\lambda\_{i} = |\\{(i,j)\in\mathrm{Young}(\lambda)\\}| = \max\\{j:(i,j)\in\mathrm{Young}(\lambda)\\}$.
+
+Given a partition $\lambda$, there is a canonical bijection between the cells in $\mathrm{Young}(\lambda)$ and those in $\mathrm{Young}(\lambda')$ arising from the relation $(i,j)\in\mathrm{Young}(\lambda)\iff(j,i)\in\mathrm{Young}(\lambda')$.
 
 ### Arms, legs, and hooks
 
