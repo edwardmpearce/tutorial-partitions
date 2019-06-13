@@ -62,6 +62,17 @@ Sometimes we will use a convention obtained by rotating a diagram drawn using En
 
 We will revisit Cartesian notation when we discuss applications to monomial ideals in algebraic geometry.
 
+### Summary
+
+In the table below we summarize the relations between the different conventions for drawing Young diagrams and indexing cells in terms of the change of basis matrix to the standard Euclidean basis:
+
+| Convention | Transformation matrix |
+|:-----------|:----------------------|
+| Cartesian | $\left(\begin{array}{cc}1 & 0\\\\0 & 1\end{array}\right)$ |
+| English | $\left(\begin{array}{cc}0 & 1\\\\-1 & 0\end{array}\right)$ |
+| French | $\left(\begin{array}{cc}0 & 1\\\\1 & 0\end{array}\right)$ |
+| Russian | $\left(\begin{array}{cc}1 & -1\\\\1 & 1\end{array}\right)$ |
+
 ## Display options in SageMath
 
 We can choose how we want Ferrers and Young diagrams/tableaux to be displayed in SageMath using `Partitions.options()` to set global options. The keyword `convention` (or its alias `notation`) can be set to either `'French'` or `'English'` (not case sensitive), and we can also use the `diagram_str` keyword to choose the character used for cells when printing Ferrers diagrams. By default, Ferrers diagrams are printed using the English convention with asterisks `"*"` for cells. 
