@@ -111,7 +111,7 @@ Maya diagrams are used to visualize binary sequences of zeros and ones, and the 
 
 #### Minimal zero-one sequences
 
-We begin by explaining the `zero_one_sequence()` [method](https://doc.sagemath.org/html/en/reference/combinat/sage/combinat/partition.html#sage.combinat.partition.Partition.zero_one_sequence) for partitions in SageMath. We draw the Young diagram of a partition in [English notation](../visualization/conventions/) and label edges on its outer rim/boundary path according to the rule North=0 and East=1, and then read this 0-1 sequence from $(0, -\infty)$ to $(\infty, 0)$ so that part size increases as we read along the boundary path. 
+We begin by explaining the `zero_one_sequence()` [method](https://doc.sagemath.org/html/en/reference/combinat/sage/combinat/partition.html#sage.combinat.partition.Partition.zero_one_sequence) for partitions in SageMath. We draw the Young diagram of a partition in [English notation](../visualization/conventions/) and label edges on its outer rim/boundary path according to the rule North=0 and East=1, and then read this 0-1 sequence from $(0, -\infty)$ to $(+\infty, 0)$ so that part size increases as we read along the boundary path. 
 
 Though such a sequence starts with infinitely many 0s and end with infinitely many 1s, the `zero_one_sequence()` method omits these to return a finite output, describing only the edges on the boundary of the Young diagram which do not lie on the axes. This may be called the _minimal_ 0-1 sequence of a partition.
 
@@ -138,9 +138,22 @@ Partition(zero_one=[1,0,1,1,0,1,1,1,0]) # Same as Partitions().from_zero_one([1,
 
 This leads to reading boundary paths from right to left in Russian and Cartesian notations.
 
-#### Dyck paths
+#### Dyck words
+
+Next we explain the `to_dyck_word()` [method](https://doc.sagemath.org/html/en/reference/combinat/sage/combinat/partition.html#sage.combinat.partition.Partition.to_dyck_word) for partitions in SageMath. We draw the Young diagram of a partition in [English notation](../visualization/conventions/) and label edges on its outer rim/boundary path according to the rule North=1 and East=0, and then read this 0-1 sequence from $(0, -\infty)$ to $(+\infty, 0)$ so that part size increases as we read along the boundary path. 
 
 We will begin with an illustration of how to obtain the Maya diagram corresponding to a given partition before discussing the formal definitions and details. Just as with Young diagrams, Maya diagrams are also subject to choices of convention for how they relate to a particular partition, but for our purposes, we will fix the following convention:
+
+We can obtain the Dyck word associated to a given partition in SageMath using the `to_dyck_word()` method, and we can also recover the partition from its Dyck word using the `to_partition()` method.
+
+```python
+Partition([6,3,1]).to_dyck_word()
+# 
+Partition([6,3,1]).to_dyck_word(10)
+# 
+Partition([6,3,1]).to_dyck_word().to_partition()
+# [6,3,1]
+```
 
 #### States
 
