@@ -16,22 +16,7 @@ The most simple alternative to describing a partition $\lambda$ by listing its p
 
 We usually write this as $\lambda=1^{\alpha\_{1}}2^{\alpha\_{2}}3^{\alpha\_{3}}\ldots\lambda\_{1}^{\alpha\_{\lambda\_{1}}}$ where $\lambda\_{1}=\max\\{i\in\mathbb{Z}\_{>0}|\alpha\_{\lambda}(i)\ne0\\}$ is called the **largest part** in $\lambda$, but may also directly write $\exp(\lambda)=(\alpha\_{1},\alpha\_{2},\alpha\_{3},\ldots,\alpha\_{\lambda\_{1}})$. For example:
 
-<script type="text/tikz">
-  \begin{tikzpicture}
-    \begin{scope}[local bounding box=scope1]
-      \draw (0,0) -- (6,0);\draw (0,-1) -- (6,-1);\draw (0,-2) -- (4,-2);\draw (0,-3) -- (4,-3);\draw (0,-4) -- (2,-4);\draw (0,-5) -- (1,-5);\draw (1,0) -- (1,-5);\draw (2,0) -- (2,-4);\draw (3,0) -- (3,-3);\draw (4,0) -- (4,-3);\draw (5,0) -- (5,-1);\draw (6,0) -- (6,-1);\draw (0,0) -- (0,-5);
-	\end{scope}
-    \begin{scope}[font=\Large, shift={(-0.5,-0.5)}]
-	  \draw (0,0) node{6};\draw (0,-1) node{4};\draw (0,-2) node{4};\draw (0,-3) node{2};\draw (0,-4) node{1};
-	  \draw (-2.5,0) node{$1=\alpha_{6}$};\draw (-2.5,-0.75) node{$0=\alpha_{5}$};\draw (-2.5,-1.5) node{$2=\alpha_{4}$};\draw (-2.5,-2.25) node{$0=\alpha_{3}$};\draw (-2.5,-3) node{$1=\alpha_{2}$};\draw (-2.5,-4) node{$1=\alpha_{1}$};
-	  \draw (-0.4,0) -- (-1.6,0);\draw (-0.4,-1) -- (-1.6,-1.5);\draw (-0.4,-2) -- (-1.6,-1.5);\draw (-0.4,-3) -- (-1.6,-3);\draw (-0.4,-4) -- (-1.6,-4);
-    \end{scope}
-    \begin{scope}[font=\Large, shift={(scope1.north)}]
-	  \draw (0,1.2) node{$\lambda = (6,4,4,2,1)=1^{1}2^{1}3^{0}4^{2}5^{0}6^{1}$};
-	  \draw (0,0.5) node{$\exp(\lambda)=(1,1,0,2,0,1)$};
-    \end{scope}
-  \end{tikzpicture}
-</script>
+![Exponential notation](/img/exponential_notation.png)
 
 We can obtain the exponential notation for a given partition in SageMath using the `to_exp()` method, and we can construct a partition from its exponential form using the `exp` keyword argument in the constructor.
 
@@ -46,17 +31,7 @@ Partition(exp=[1,1,0,2,0,1])
 
 The **Frobenius rank** of a partition $\lambda$ is given by the number of cells on the main diagonal of $\lambda$, and formally defined to be $\max\\{i\in\mathbb{Z}\_{>0}:\lambda\_{i}\ge i\\}$. This is also equal to the length of the largest square fitting into the Young diagram of $\lambda$. For example, the Frobenius rank of the partition $\lambda = (6,4,4,2,1)$ is $3$.
 
-<script type="text/tikz">
-  \begin{tikzpicture}
-    \begin{scope}[local bounding box=scope1]
-	  \filldraw[blue!5] (0,0) rectangle (1,-1);\filldraw[blue!5] (1,-1) rectangle (2,-2);\filldraw[blue!5] (2,-2) rectangle (3,-3);
-      \draw (0,0) -- (6,0);\draw (0,-1) -- (6,-1);\draw (0,-2) -- (4,-2);\draw (0,-3) -- (4,-3);\draw (0,-4) -- (2,-4);\draw (0,-5) -- (1,-5);\draw (1,0) -- (1,-5);\draw (2,0) -- (2,-4);\draw (3,0) -- (3,-3);\draw (4,0) -- (4,-3);\draw (5,0) -- (5,-1);\draw (6,0) -- (6,-1);\draw (0,0) -- (0,-5);
-	\end{scope}
-    \begin{scope}[font=\Large, shift={(0.5,-0.5)}]
-	  \draw (0,0) node{1};\draw (1,-1) node{2};\draw (2,-2) node{3};
-    \end{scope}
-  \end{tikzpicture}
-</script>
+![Frobenius rank](/img/frobenius_rank.png)
 
 We can obtain the Frobenius rank for a given partition in SageMath using the `frobenius_rank()` method.
 
@@ -66,21 +41,7 @@ $$p\_{i}=a\_{\lambda}(i,i),q\_{i}=l\_{\lambda}(i,i).$$
 
 For example, the diagram below illustrates how to obtain the Frobenius coordinates $p=(5,2,1)$, $q=(4,2,0)$ from the partition $\lambda = (6,4,4,2,1)$:
 
-<script type="text/tikz">
-  \begin{tikzpicture}
-    \begin{scope}
-	  \filldraw[blue!5] (0,0) rectangle (1,-1);\filldraw[blue!5] (1,-1) rectangle (2,-2);\filldraw[blue!5] (2,-2) rectangle (3,-3);
-      \filldraw[red!15] (1,0) rectangle (6,-1);\filldraw[red!15] (2,-1) rectangle (4,-2);\filldraw[red!15] (3,-2) rectangle (4,-3);
-	  \filldraw[green!15] (0,-1) rectangle (1,-5);\filldraw[green!15] (1,-2) rectangle (2,-4);
-	\end{scope}
-	\begin{scope}[black!20]
-	  \draw (0,0) -- (6,0);\draw (0,-1) -- (6,-1);\draw (0,-2) -- (4,-2);\draw (0,-3) -- (4,-3);\draw (0,-4) -- (2,-4);\draw (0,-5) -- (1,-5);\draw (1,0) -- (1,-5);\draw (2,0) -- (2,-4);\draw (3,0) -- (3,-3);\draw (4,0) -- (4,-3);\draw (5,0) -- (5,-1);\draw (6,0) -- (6,-1);\draw (0,0) -- (0,-5);
-    \end{scope}
-	\begin{scope}[font=\Large, local bounding box=scope1]  
-	  \draw (0,0) -- (6,0);\draw (0,0) -- (0,-5);\draw (6,0) -- (6,-1);\draw (0,-1) -- (6,-1);\draw (0,-5) -- (1,-5);\draw (1,0) -- (1,-5);\draw (3.5, -0.5) node{5};\draw (0.5, -3.0) node{4};\draw (4,-1) -- (4,-2);\draw (1,-2) -- (4,-2);\draw (1,-4) -- (2,-4);\draw (2,-1) -- (2,-4);\draw (3.0, -1.5) node{2};\draw (1.5, -3.0) node{2};\draw (4,-2) -- (4,-3);\draw (2,-3) -- (4,-3);\draw (2,-3) -- (3,-3);\draw (3,-2) -- (3,-3);\draw (3.5, -2.5) node{1};\draw (2.5, -3.5) node{0};
-    \end{scope}
-  \end{tikzpicture}
-</script>
+![Frobenius coordinates](/img/frobenius_coordinates.png)
 
 We can obtain the Frobenius coordinates for a given partition in SageMath using the `frobenius_coordinates()` method, and we can also construct a partition using the `frobenius_coordinates` keyword argument in the constructor.
 
@@ -117,15 +78,7 @@ Though such a sequence starts with infinitely many 0s and end with infinitely ma
 
 Below we illustrate how to obtain the minimal zero-one sequence $(1,0,1,1,0,1,1,1,0)$ from the partition $\lambda=(6,3,1)$:
 
-<script type="text/tikz">
-  \begin{tikzpicture}
-    \draw (0,0) -- (6,0);\draw (0,-1) -- (6,-1);\draw (0,-2) -- (3,-2);\draw (0,-3) -- (1,-3);\draw (1,0) -- (1,-3);\draw (2,0) -- (2,-2);\draw (3,0) -- (3,-2);\draw (4,0) -- (4,-1);\draw (5,0) -- (5,-1);\draw (6,0) -- (6,-1);\draw (0,0) -- (0,-3);
-    \draw[blue, ->] (0,-3) -- (1,-3);\draw[orange, ->] (1,-3) -- (1,-2);\draw[blue, ->] (1,-2) -- (2,-2);\draw[blue, ->] (2,-2) -- (3,-2);\draw[orange, ->] (3,-2) -- (3,-1);\draw[blue, ->] (3,-1) -- (4,-1);\draw[blue, ->] (4,-1) -- (5,-1);\draw[blue, ->] (5,-1) -- (6,-1);\draw[orange, ->] (6,-1) -- (6,-0);
-	\begin{scope}[font=\Large]
-	  \draw (0,-3) [below right] node{1};\draw (1,-3) [right] node{0};\draw (1,-2) [below right] node{1};\draw (2,-2) [below right] node{1};\draw (3,-2) [right] node{0};\draw (3,-1) [below right] node{1};\draw (4,-1) [below right] node{1};\draw (5,-1) [below right] node{1};\draw (6,-1) [right] node{0};
-	\end{scope}
-  \end{tikzpicture}
-</script>
+![Zero-one sequence](/img/zero_one_sequence.png)
 
 We can obtain the minimal zero-one sequence of a given partition in SageMath using the `zero_one_sequence()` method, and we can also construct a partition using the `zero_one` keyword argument in the constructor.
 
