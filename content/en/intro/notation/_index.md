@@ -16,7 +16,7 @@ The most simple alternative to describing a partition $\lambda$ by listing its p
 
 We usually write this as $\lambda=1^{\alpha\_{1}}2^{\alpha\_{2}}3^{\alpha\_{3}}\ldots\lambda\_{1}^{\alpha\_{\lambda\_{1}}}$ where $\lambda\_{1}=\max\\{i\in\mathbb{Z}\_{>0}|\alpha\_{\lambda}(i)\ne0\\}$ is called the **largest part** in $\lambda$, but may also directly write $\exp(\lambda)=(\alpha\_{1},\alpha\_{2},\alpha\_{3},\ldots,\alpha\_{\lambda\_{1}})$. For example:
 
-![Exponential notation](/img/exponential_notation.png)
+![Exponential notation](/tutorial-partitions/img/exponential_notation.png)
 
 We can obtain the exponential notation for a given partition in SageMath using the `to_exp()` method, and we can construct a partition from its exponential form using the `exp` keyword argument in the constructor.
 
@@ -31,7 +31,7 @@ Partition(exp=[1,1,0,2,0,1])
 
 The **Frobenius rank** of a partition $\lambda$ is given by the number of cells on the main diagonal of $\lambda$, and formally defined to be $\max\\{i\in\mathbb{Z}\_{>0}:\lambda\_{i}\ge i\\}$. This is also equal to the length of the largest square fitting into the Young diagram of $\lambda$. For example, the Frobenius rank of the partition $\lambda = (6,4,4,2,1)$ is $3$.
 
-![Frobenius rank](/img/frobenius_rank.png)
+![Frobenius rank](/tutorial-partitions/img/frobenius_rank.png)
 
 We can obtain the Frobenius rank for a given partition in SageMath using the `frobenius_rank()` method.
 
@@ -41,7 +41,7 @@ $$p\_{i}=a\_{\lambda}(i,i),q\_{i}=l\_{\lambda}(i,i).$$
 
 For example, the diagram below illustrates how to obtain the Frobenius coordinates $p=(5,2,1)$, $q=(4,2,0)$ from the partition $\lambda = (6,4,4,2,1)$:
 
-![Frobenius coordinates](/img/frobenius_coordinates.png)
+![Frobenius coordinates](/tutorial-partitions/img/frobenius_coordinates.png)
 
 We can obtain the Frobenius coordinates for a given partition in SageMath using the `frobenius_coordinates()` method, and we can also construct a partition using the `frobenius_coordinates` keyword argument in the constructor.
 
@@ -78,7 +78,7 @@ Though such a sequence starts with infinitely many 0s and end with infinitely ma
 
 Below we illustrate how to obtain the minimal zero-one sequence $(1,0,1,1,0,1,1,1,0)$ from the partition $\lambda=(6,3,1)$:
 
-![Zero-one sequence](/img/zero_one_sequence.png)
+![Zero-one sequence](/tutorial-partitions/img/zero_one_sequence.png)
 
 We can obtain the minimal zero-one sequence of a given partition in SageMath using the `zero_one_sequence()` method, and we can also construct a partition using the `zero_one` keyword argument in the constructor.
 

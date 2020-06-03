@@ -8,7 +8,7 @@ Notice that the way we indexed cells on the previous page is the same way as we 
 
 Let $\lambda = (6,3,1)$. We highlight the cells $s = (1,3), t = (2,3) \in \mathrm{Young}(\lambda)$ in _English_ notation below:
 
-![English notation](/img/english_notation.png)
+![English notation](/tutorial-partitions/img/english_notation.png)
 
 We will introduce three other ways to draw Young diagrams: French notation, Russian notation, and Cartesian notation, and draw the Young diagram of $\lambda = (6,3,1)$ with the cells $s = (1,3), t = (2,3) \in \mathrm{Young}(\lambda)$ highlighted below using each of these conventions in turn.
 
@@ -16,13 +16,13 @@ We will introduce three other ways to draw Young diagrams: French notation, Russ
 
 **French notation** relates to English notation by a reflection in the $x$-axis, i.e. stack parts in rows with index increasing from bottom to top, i.e. longest row/largest part at the bottom, aligned to the bottom-left corner of the 1st quadrant.
 
-![French notation](/img/french_notation.png)
+![French notation](/tutorial-partitions/img/french_notation.png)
 
 ### Russian notation
 
 **Russian notation** may be obtained by rotating a diagram drawn using English notation anticlockwise 135 degrees.
 
-![Russian notation](/img/russian_notation.png)
+![Russian notation](/tutorial-partitions/img/russian_notation.png)
 
 Diagrams in Russian notation will be used to motivate Maya diagrams later.
 
@@ -30,7 +30,7 @@ Diagrams in Russian notation will be used to motivate Maya diagrams later.
 
 Sometimes we will use a convention obtained by rotating a diagram drawn using English notation anticlockwise 90 degrees, which we will call 'Cartesian' notation. In **Cartesian notation** the diagrams are aligned to the bottom-left corner of the 1st quadrant, and parts correspond to columns which decrease in size from left to right. The $(i,j)$ coordinates for cells resemble the standard Cartesian coordinates $(x,y)$ for the Euclidean plane.
 
-![Cartesian notation](/img/cartesian_notation.png)
+![Cartesian notation](/tutorial-partitions/img/cartesian_notation.png)
 
 We will revisit Cartesian notation when we discuss applications to monomial ideals in algebraic geometry.
 

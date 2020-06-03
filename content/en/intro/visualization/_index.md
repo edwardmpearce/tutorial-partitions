@@ -14,7 +14,7 @@ The two most commonly used methods of representing partitions with diagrams are 
 
 To represent a partition as a **Ferrers diagram** we draw a row of dots for each part in the partition and stack them from top to bottom in descending order, i.e. longest row/largest part at the top, aligned to the upper-left corner (of the 4th quadrant). For example, the Ferrers diagram for the partition $\lambda = (6,3,1)$ is given by
 
-![Ferrers diagram](/img/ferrers_diagram.png)
+![Ferrers diagram](/tutorial-partitions/img/ferrers_diagram.png)
 
 We can use the `ferrers_diagram()` method to return the Ferrers diagram of a partition as a string, and we can use the `pp()` method to print the Ferrers diagram to the display.
 
@@ -32,7 +32,7 @@ mu.pp() # Runs print(mu.ferrers_diagram()), returns None
 
 A **Young diagram** is very similar to a Ferrers diagram except we draw rows of boxes instead of dots. For example, we display the Young diagram for the partition $\lambda = (6,3,1)$ below.
 
-![Young diagram](/img/young_diagram.png)
+![Young diagram](/tutorial-partitions/img/young_diagram.png)
 
 Young diagrams are a more useful way of visualizing partitions because we can fill the boxes (cells) with numbers (or other data) to obtain Young tableux.
 
@@ -42,7 +42,7 @@ The **conjugate** of the partition $\lambda$ is the partition $\lambda'$ obtaine
 
 For example, if $\lambda = (6,3,1)$, then its conjugate is given by $\lambda'=(3, 2, 2, 1, 1, 1)$.
 
-![Conjugation](/img/conjugation.png)
+![Conjugation](/tutorial-partitions/img/conjugation.png)
 
 1. Notice that conjugation is a size-preserving operation on the set of partitions. That is, $\mathrm{size}(\lambda')=\mathrm{size}(\lambda)$.
 2. Notice that if we take the conjugate of a partition twice we get back the partition we started with. That is, $(\lambda^\prime)^\prime=\lambda$. Therefore conjugation is what is known as an involution, i.e. a self-inverse function, on the set of partitions.
@@ -62,7 +62,7 @@ We call each box (resp. dot) in a Young (resp. Ferrers) diagram a **cell** in th
 
 Let $\lambda = (6,3,1)$. We highlight the cells $s = (1,3), t = (2,3) \in \mathrm{Young}(\lambda)$ in the diagram below
 
-![Cells](/img/cells.png)
+![Cells](/tutorial-partitions/img/cells.png)
 
 We can obtain the coordinates of the cells in a partition as a list using the `cells()` method, but note that in Python/SageMath that indices are $0$-based (i.e. indices start from $0$ instead of $1$).
 
@@ -87,7 +87,7 @@ The **arm** of a cell $s=(i,j)$ consists of the cells on the same row of the You
 
 As an example, we let $\lambda = (6,3,1)$ and $s = (1,3)\in \mathrm{Young}(\lambda)$ and highlight cells in $\mathrm{arm}\_{\lambda}(s)$ with the letter $a$ on a red background and cells in $\mathrm{leg}\_{\lambda}(s)$ with the letter $l$ on a green background in the diagram below:
 
-![Arms, legs, and hooks](/img/arm_leg_hook.png)
+![Arms, legs, and hooks](/tutorial-partitions/img/arm_leg_hook.png)
 
 Given a partition $\lambda$, we can define associated functions $a\_{\lambda},l\_{\lambda},h\_{\lambda}:\mathrm{Young}(\lambda)\to\mathbb{Z}\_{\ge0}$, called the **arm length**, **leg length**, and **hook length**, respectively, which act on cells in the Young diagram of $\lambda$ as follows:
 
