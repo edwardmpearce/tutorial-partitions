@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.55.0" />
+    <meta name="description" content="Integer Partitions Tutorial">
+<meta name="author" content="Edward Pearce">
+
+    <link rel="icon" href="/tutorial-partitions/img/favicon.png" type="image/png">
+
+    <title>Statistics :: Integer Partitions Tutorial - Edward Pearce</title>
+
+    
+    <link href="/tutorial-partitions/css/nucleus.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/fontawesome-all.min.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/hybrid.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/featherlight.min.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/perfect-scrollbar.min.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/auto-complete.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/atom-one-dark-reasonable.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/theme.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/hugo-theme.css?1593465865" rel="stylesheet">
+    
+    
+
+    <script src="/tutorial-partitions/js/jquery-3.3.1.min.js?1593465865"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+<script type="text/javascript" async
+  src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]} })
+</script>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+  </head>
+  <body class="" data-url="/tutorial-partitions/intro/statistics/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://edwardmpearce.github.io/tutorial-partitions/">
+  <img id="logo" src="/tutorial-partitions/img/logo-crop.png" alt="Partition" style="width:100%; height:100%;" type="image/png"></img>
+</a>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/tutorial-partitions/js/lunr.min.js?1593465865"></script>
+<script type="text/javascript" src="/tutorial-partitions/js/auto-complete.js?1593465865"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/edwardmpearce.github.io\/tutorial-partitions\/";
+    
+</script>
+<script type="text/javascript" src="/tutorial-partitions/js/search.js?1593465865"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/" title="Introduction" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/tutorial-partitions/intro/">
+          <b>1. </b>Introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/basics/" title="Basics" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tutorial-partitions/intro/basics/">
+          Basics
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/visualization/" title="Visualization" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tutorial-partitions/intro/visualization/">
+          Visualization
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/visualization/conventions/" title="Diagram conventions" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tutorial-partitions/intro/visualization/conventions/">
+          Diagram conventions
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/notation/" title="Notation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tutorial-partitions/intro/notation/">
+          Notation
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/statistics/" title="Statistics" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/tutorial-partitions/intro/statistics/">
+          Statistics
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/edwardmpearce/tutorial-partitions/"><i class='fab fa-github'></i> Github repo</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://edwardmpearce.github.io/"><i class='fas fa-bullhorn'></i> Credits</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=R226X2KQPU564&amp;currency_code=GBP&amp;source=url"><i class='fas fa-heart'></i> Donate</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <center>
+    
+    <a class="github-button" href="https://github.com/edwardmpearce/tutorial-partitions/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download matcornic/hugo-theme-learn on GitHub">Download</a>
+
+    
+    <a class="github-button" href="https://github.com/edwardmpearce/tutorial-partitions" data-icon="octicon-star" data-show-count="true" aria-label="Star matcornic/hugo-theme-learn on GitHub">Star</a>
+
+    
+    <a class="github-button" href="https://github.com/edwardmpearce/tutorial-partitions/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork matcornic/hugo-theme-learn on GitHub">Fork</a>
+
+    <p>Built with <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/matcornic/hugo-theme-learn">Learn theme</a></p>
+	
+	<p>Copyright &copy; Edward Pearce 2020</p>
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/edwardmpearce/tutorial-partitions/edit/master/content/intro/statistics/_index.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/tutorial-partitions/'>Integer Partitions Tutorial</a> > <a href='/tutorial-partitions/intro/'>Introduction</a> > Statistics
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#partition-statistics">Partition Statistics</a></li>
+<li><a href="#calculating-from-different-notations">Calculating from different notations</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Statistics
+            </h1>
+          
+
+        
+
+
+
+	
+
+<h2 id="partition-statistics">Partition Statistics</h2>
+
+<p>Now that we have discussed many different ways of thinking about partitions, we move on to discussing properties (or statistics) of partitions, and how to calculate them.</p>
+
+<h2 id="calculating-from-different-notations">Calculating from different notations</h2>
+
+<p>We can prove that these notations are equivalent and that we can freely interchange between them, i.e. that the set of partitions is in bijection with the set of e.g. Frobenius coordinates</p>
+
+<p>We also demonstrate and explain how these have been implemented in SageMath</p>
+
+<pre><code class="language-python"># Insert code here
+</code></pre>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/tutorial-partitions/js/clipboard.min.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/perfect-scrollbar.min.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/perfect-scrollbar.jquery.min.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/jquery.sticky.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/featherlight.min.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/highlight.pack.js?1593465865"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/tutorial-partitions/js/modernizr.custom-3.6.0.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/learn.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/hugo-learn.js?1593465865"></script>
+
+    <link href="/tutorial-partitions/mermaid/mermaid.css?1593465865" rel="stylesheet" />
+    <script src="/tutorial-partitions/mermaid/mermaid.js?1593465865"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>

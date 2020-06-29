@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.55.0" />
+    <meta name="description" content="Integer Partitions Tutorial">
+<meta name="author" content="Edward Pearce">
+
+    <link rel="icon" href="/tutorial-partitions/img/favicon.png" type="image/png">
+
+    <title>Integer Partitions Tutorial :: Integer Partitions Tutorial - Edward Pearce</title>
+
+    
+    <link href="/tutorial-partitions/css/nucleus.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/fontawesome-all.min.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/hybrid.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/featherlight.min.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/perfect-scrollbar.min.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/auto-complete.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/atom-one-dark-reasonable.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/theme.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/hugo-theme.css?1593465865" rel="stylesheet">
+    
+    
+
+    <script src="/tutorial-partitions/js/jquery-3.3.1.min.js?1593465865"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+<script type="text/javascript" async
+  src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]} })
+</script>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+  </head>
+  <body class="" data-url="/tutorial-partitions/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://edwardmpearce.github.io/tutorial-partitions/">
+  <img id="logo" src="/tutorial-partitions/img/logo-crop.png" alt="Partition" style="width:100%; height:100%;" type="image/png"></img>
+</a>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/tutorial-partitions/js/lunr.min.js?1593465865"></script>
+<script type="text/javascript" src="/tutorial-partitions/js/auto-complete.js?1593465865"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/edwardmpearce.github.io\/tutorial-partitions\/";
+    
+</script>
+<script type="text/javascript" src="/tutorial-partitions/js/search.js?1593465865"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tutorial-partitions/intro/">
+          <b>1. </b>Introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/basics/" title="Basics" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tutorial-partitions/intro/basics/">
+          Basics
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/visualization/" title="Visualization" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tutorial-partitions/intro/visualization/">
+          Visualization
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/visualization/conventions/" title="Diagram conventions" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tutorial-partitions/intro/visualization/conventions/">
+          Diagram conventions
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/notation/" title="Notation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tutorial-partitions/intro/notation/">
+          Notation
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/statistics/" title="Statistics" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tutorial-partitions/intro/statistics/">
+          Statistics
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/edwardmpearce/tutorial-partitions/"><i class='fab fa-github'></i> Github repo</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://edwardmpearce.github.io/"><i class='fas fa-bullhorn'></i> Credits</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=R226X2KQPU564&amp;currency_code=GBP&amp;source=url"><i class='fas fa-heart'></i> Donate</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <center>
+    
+    <a class="github-button" href="https://github.com/edwardmpearce/tutorial-partitions/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download matcornic/hugo-theme-learn on GitHub">Download</a>
+
+    
+    <a class="github-button" href="https://github.com/edwardmpearce/tutorial-partitions" data-icon="octicon-star" data-show-count="true" aria-label="Star matcornic/hugo-theme-learn on GitHub">Star</a>
+
+    
+    <a class="github-button" href="https://github.com/edwardmpearce/tutorial-partitions/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork matcornic/hugo-theme-learn on GitHub">Fork</a>
+
+    <p>Built with <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/matcornic/hugo-theme-learn">Learn theme</a></p>
+	
+	<p>Copyright &copy; Edward Pearce 2020</p>
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+
+        
+
+<span id="sidebar-toggle-span">
+<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
+</span>
+
+ 
+
+
+<h1 id="integer-partitions-tutorial">Integer Partitions Tutorial</h1>
+
+<p>Partitions are studied in the mathematical fields of number theory and combinatorics, but have applications in many other areas, such as algebraic geometry, theoretical physics, and representation theory, where partitions arise in the study of monomial ideals, symmetric polynomials, special eigenfunctors and operators, and irreducible representations of symmetric groups to name a few.</p>
+
+<p>This tutorial gives a subjective view on the theory of integer partitions, along with sample code for calculations using <a href="https://www.sagemath.org" target="_blank">SageMath</a>.</p>
+
+<p>It is intended to be useful both for those interested in learning more about the combinatorics of partitions (along with some applications), as well as those wanting to learn how to use <a href="https://www.sagemath.org" target="_blank">SageMath</a> for combinatorial calculations.</p>
+
+<p>You can navigate this website using the arrow keys.</p>
+
+<h2 id="sagemath">SageMath</h2>
+
+<p><a href="https://www.sagemath.org" target="_blank">SageMath</a> is a free open-source mathematics software system using a Python-based language which you can download and install for yourself, or simply run <a href="https://sagecell.sagemath.org" target="_blank">online</a> or <a href="https://cocalc.com" target="_blank">in the cloud</a>. We will demonstrate some functionality of SageMath&rsquo;s module for integer partitions (<a href="https://doc.sagemath.org/html/en/reference/combinat/sage/combinat/tutorial.html#partitions-of-integers" target="_blank">tutorial</a>, <a href="https://doc.sagemath.org/html/en/reference/combinat/sage/combinat/partition.html#sage-combinat-partition" target="_blank">documentation</a>, <a href="https://github.com/sagemath/sage/blob/master/src/sage/combinat/partition.py" target="_blank">source</a>), but hopefully improve on the documentation already available by providing an accessible, <em>illustrated</em>, and interactive explanation of the mathematical background at the same time.</p>
+
+<p>If you want to learn more about the multitude of other uses of SageMath for mathematical computations, check out their <a href="https://doc.sagemath.org/html/en/index.html" target="_blank">extensive documentation</a>.</p>
+
+<h2 id="contribute-to-this-documentation">Contribute to this documentation</h2>
+
+<p>Feel free to update this content, just click the <strong>Edit this page</strong> link displayed on top right of each page, and make a pull request.</p>
+
+<div class="notices note" ><p>Hi! My name is Edward and I am the author of this tutorial. If you want to find out more about me or get in touch, you can check out my <a href="https://edwardmpearce.github.io" target="_blank">personal website</a>. If you like what you are reading please consider donating (link in menu) so I can continue creating educational content.</p>
+</div>
+	
+  
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/tutorial-partitions/js/clipboard.min.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/perfect-scrollbar.min.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/perfect-scrollbar.jquery.min.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/jquery.sticky.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/featherlight.min.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/highlight.pack.js?1593465865"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/tutorial-partitions/js/modernizr.custom-3.6.0.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/learn.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/hugo-learn.js?1593465865"></script>
+
+    <link href="/tutorial-partitions/mermaid/mermaid.css?1593465865" rel="stylesheet" />
+    <script src="/tutorial-partitions/mermaid/mermaid.js?1593465865"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

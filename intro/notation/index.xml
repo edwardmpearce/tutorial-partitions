@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notation on Integer Partitions Tutorial - Edward Pearce</title>
+    <link>https://edwardmpearce.github.io/tutorial-partitions/intro/notation/</link>
+    <description>Recent content in Notation on Integer Partitions Tutorial - Edward Pearce</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;copy; Edward Pearce {year}</copyright>
+    
+	<atom:link href="https://edwardmpearce.github.io/tutorial-partitions/intro/notation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

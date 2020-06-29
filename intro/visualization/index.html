@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.55.0" />
+    <meta name="description" content="Integer Partitions Tutorial">
+<meta name="author" content="Edward Pearce">
+
+    <link rel="icon" href="/tutorial-partitions/img/favicon.png" type="image/png">
+
+    <title>Visualization :: Integer Partitions Tutorial - Edward Pearce</title>
+
+    
+    <link href="/tutorial-partitions/css/nucleus.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/fontawesome-all.min.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/hybrid.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/featherlight.min.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/perfect-scrollbar.min.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/auto-complete.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/atom-one-dark-reasonable.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/theme.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/hugo-theme.css?1593465865" rel="stylesheet">
+    
+    
+
+    <script src="/tutorial-partitions/js/jquery-3.3.1.min.js?1593465865"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+<script type="text/javascript" async
+  src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]} })
+</script>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+  </head>
+  <body class="" data-url="/tutorial-partitions/intro/visualization/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://edwardmpearce.github.io/tutorial-partitions/">
+  <img id="logo" src="/tutorial-partitions/img/logo-crop.png" alt="Partition" style="width:100%; height:100%;" type="image/png"></img>
+</a>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/tutorial-partitions/js/lunr.min.js?1593465865"></script>
+<script type="text/javascript" src="/tutorial-partitions/js/auto-complete.js?1593465865"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/edwardmpearce.github.io\/tutorial-partitions\/";
+    
+</script>
+<script type="text/javascript" src="/tutorial-partitions/js/search.js?1593465865"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/" title="Introduction" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/tutorial-partitions/intro/">
+          <b>1. </b>Introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/basics/" title="Basics" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tutorial-partitions/intro/basics/">
+          Basics
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/visualization/" title="Visualization" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/tutorial-partitions/intro/visualization/">
+          Visualization
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/visualization/conventions/" title="Diagram conventions" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tutorial-partitions/intro/visualization/conventions/">
+          Diagram conventions
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/notation/" title="Notation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tutorial-partitions/intro/notation/">
+          Notation
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/statistics/" title="Statistics" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tutorial-partitions/intro/statistics/">
+          Statistics
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/edwardmpearce/tutorial-partitions/"><i class='fab fa-github'></i> Github repo</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://edwardmpearce.github.io/"><i class='fas fa-bullhorn'></i> Credits</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=R226X2KQPU564&amp;currency_code=GBP&amp;source=url"><i class='fas fa-heart'></i> Donate</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <center>
+    
+    <a class="github-button" href="https://github.com/edwardmpearce/tutorial-partitions/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download matcornic/hugo-theme-learn on GitHub">Download</a>
+
+    
+    <a class="github-button" href="https://github.com/edwardmpearce/tutorial-partitions" data-icon="octicon-star" data-show-count="true" aria-label="Star matcornic/hugo-theme-learn on GitHub">Star</a>
+
+    
+    <a class="github-button" href="https://github.com/edwardmpearce/tutorial-partitions/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork matcornic/hugo-theme-learn on GitHub">Fork</a>
+
+    <p>Built with <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/matcornic/hugo-theme-learn">Learn theme</a></p>
+	
+	<p>Copyright &copy; Edward Pearce 2020</p>
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/edwardmpearce/tutorial-partitions/edit/master/content/intro/visualization/_index.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/tutorial-partitions/'>Integer Partitions Tutorial</a> > <a href='/tutorial-partitions/intro/'>Introduction</a> > Visualization
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#graphical-representations">Graphical representations</a>
+<ul>
+<li><a href="#ferrers-diagrams">Ferrers diagrams</a></li>
+<li><a href="#young-diagrams-and-young-tableaux">Young diagrams and Young tableaux</a></li>
+<li><a href="#conjugation">Conjugation</a></li>
+</ul></li>
+<li><a href="#cells">Cells</a>
+<ul>
+<li><a href="#arms-legs-and-hooks">Arms, legs, and hooks</a>
+<ul>
+<li><a href="#table-of-functions">Table of functions</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Visualization
+            </h1>
+          
+
+        
+
+
+
+	
+
+<h2 id="graphical-representations">Graphical representations</h2>
+
+<p>Now that we&rsquo;ve given a few basic definitions, it&rsquo;s time to appreciate the fact that we can think about partitions visually and thus utilize our natural spatial intuition to further understand them, rather than only thinking of them as sequences of numbers.</p>
+
+<p>The two most commonly used methods of representing partitions with diagrams are Ferrers diagrams and Young diagrams. We will discuss other diagrammatic representations later.</p>
+
+<h3 id="ferrers-diagrams">Ferrers diagrams</h3>
+
+<p>To represent a partition as a <strong>Ferrers diagram</strong> we draw a row of dots for each part in the partition and stack them from top to bottom in descending order, i.e. longest row/largest part at the top, aligned to the upper-left corner (of the 4th quadrant). For example, the Ferrers diagram for the partition $\lambda = (6,3,1)$ is given by</p>
+
+<p><img src="/tutorial-partitions/img/ferrers_diagram.png" alt="Ferrers diagram" /></p>
+
+<p>We can use the <code>ferrers_diagram()</code> method to return the Ferrers diagram of a partition as a string, and we can use the <code>pp()</code> method to print the Ferrers diagram to the display.</p>
+
+<pre><code class="language-python">mu = Partition([6,3,1])
+print(type(mu.ferrers_diagram()))
+# &lt;type 'str'&gt;
+mu.pp() # Runs print(mu.ferrers_diagram()), returns None
+# ******
+# ***
+# *
+</code></pre>
+
+<h3 id="young-diagrams-and-young-tableaux">Young diagrams and Young tableaux</h3>
+
+<p>A <strong>Young diagram</strong> is very similar to a Ferrers diagram except we draw rows of boxes instead of dots. For example, we display the Young diagram for the partition $\lambda = (6,3,1)$ below.</p>
+
+<p><img src="/tutorial-partitions/img/young_diagram.png" alt="Young diagram" /></p>
+
+<p>Young diagrams are a more useful way of visualizing partitions because we can fill the boxes (cells) with numbers (or other data) to obtain Young tableux.</p>
+
+<h3 id="conjugation">Conjugation</h3>
+
+<p>The <strong>conjugate</strong> of the partition $\lambda$ is the partition $\lambda&rsquo;$ obtained by swapping the rows and columns in the Young diagram. Formally, $\lambda&rsquo;(j):=|\{i:\lambda(i)\ge j\}|$ for each $j\in \mathbb{Z}_{&gt;0}$. This is also called the associated partition or the transpose in the literature.</p>
+
+<p>For example, if $\lambda = (6,3,1)$, then its conjugate is given by $\lambda&rsquo;=(3, 2, 2, 1, 1, 1)$.</p>
+
+<p><img src="/tutorial-partitions/img/conjugation.png" alt="Conjugation" /></p>
+
+<ol>
+<li>Notice that conjugation is a size-preserving operation on the set of partitions. That is, $\mathrm{size}(\lambda&rsquo;)=\mathrm{size}(\lambda)$.</li>
+<li>Notice that if we take the conjugate of a partition twice we get back the partition we started with. That is, $(\lambda^\prime)^\prime=\lambda$. Therefore conjugation is what is known as an involution, i.e. a self-inverse function, on the set of partitions.</li>
+</ol>
+
+<p>We can calculate the conjugate of a partition in SageMath using the <code>conjugate()</code> method or the helper function of the same name.</p>
+
+<pre><code class="language-python">Partition([5,5,3,2,1]).conjugate() # Same as conjugate(Partition([5,5,3,2,1])) 
+# [5, 4, 3, 2, 2]
+Partition([5,5,3,2,1]).conjugate().conjugate() # Same as conjugate(Partition([5, 4, 3, 2, 2]))
+# [5, 5, 3, 2, 1]
+</code></pre>
+
+<h2 id="cells">Cells</h2>
+
+<p>We call each box (resp. dot) in a Young (resp. Ferrers) diagram a <strong>cell</strong> in the diagram, with coordinates $(i,j)$ for the cell in the $i$-th row and $j$-th column of a partition. For a partition $\lambda=(\lambda_{1},\lambda_{2},\ldots,\lambda_{k})$ we identify its Young diagram with the set of cells $$\mathrm{Young}(\lambda) = \{(i,j)|1 \le i \le k, 1 \le j \le \lambda_{i}\}$$</p>
+
+<p>Let $\lambda = (6,3,1)$. We highlight the cells $s = (1,3), t = (2,3) \in \mathrm{Young}(\lambda)$ in the diagram below</p>
+
+<p><img src="/tutorial-partitions/img/cells.png" alt="Cells" /></p>
+
+<p>We can obtain the coordinates of the cells in a partition as a list using the <code>cells()</code> method, but note that in Python/SageMath that indices are $0$-based (i.e. indices start from $0$ instead of $1$).</p>
+
+<pre><code class="language-python">Partition([6,3,1]).cells()
+# [(0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (1, 0), (1, 1), (1, 2), (2, 0)]
+</code></pre>
+
+<p>It should be clear that the size of a partition $\lambda$ is equal to the number of cells in its Young diagram, that is $\mathrm{size}(\lambda) = |\mathrm{Young}(\lambda)|$, and that we can recover the parts of a partition from its Young diagram by counting the number of cells in the corresponding row: $\lambda_{i} = |\{(i,j)\in\mathrm{Young}(\lambda)\}| = \max\{j:(i,j)\in\mathrm{Young}(\lambda)\}$.</p>
+
+<p>Given a partition $\lambda$, there is a canonical bijection between the cells in $\mathrm{Young}(\lambda)$ and those in $\mathrm{Young}(\lambda&rsquo;)$ arising from the relation $(i,j)\in\mathrm{Young}(\lambda)\iff(j,i)\in\mathrm{Young}(\lambda&rsquo;)$.</p>
+
+<h3 id="arms-legs-and-hooks">Arms, legs, and hooks</h3>
+
+<p>Given a cell $(i,j)$ in a Young diagram, we define the <strong>arm</strong>, <strong>leg</strong>, and <strong>hook</strong> of $(i,j)\in\mathrm{Young}(\lambda)$ as the following subsets of $\mathrm{Young}(\lambda)$:</p>
+
+<p>$$ \mathrm{arm}_{\lambda}(i,j):= \{(i,y):j &lt; y \le \lambda_i\}\subset\mathrm{Young}(\lambda)$$
+$$ \mathrm{leg}_{\lambda}(i,j):= \{(x,j):i &lt; x \le \lambda&rsquo;_j\}\subset\mathrm{Young}(\lambda)$$
+$$ \mathrm{hook}_{\lambda}(i,j):= \{(x,y):i &lt; x \le \lambda&rsquo;_j, j \le y \le \lambda_{i}\} = \mathrm{arm}_{\lambda}(i,j)\cup\mathrm{leg}_{\lambda}(i,j)\cup\{(i,j)\}$$</p>
+
+<p>The <strong>arm</strong> of a cell $s=(i,j)$ consists of the cells on the same row of the Young diagram as $s$ which are further from the origin. Similarly, the <strong>leg</strong> of $s\in\mathrm{Young}(\lambda)$ consists of all cells in $\mathrm{Young}(\lambda)$ which lie on the same column, but further from the origin. Finally, $\mathrm{hook}_{\lambda}(s)$ is made up of all the cells from both the arm and leg of $s$ in $\lambda$ together with the cell $s$ itself.</p>
+
+<p>As an example, we let $\lambda = (6,3,1)$ and $s = (1,3)\in \mathrm{Young}(\lambda)$ and highlight cells in $\mathrm{arm}_{\lambda}(s)$ with the letter $a$ on a red background and cells in $\mathrm{leg}_{\lambda}(s)$ with the letter $l$ on a green background in the diagram below:</p>
+
+<p><img src="/tutorial-partitions/img/arm_leg_hook.png" alt="Arms, legs, and hooks" /></p>
+
+<p>Given a partition $\lambda$, we can define associated functions $a_{\lambda},l_{\lambda},h_{\lambda}:\mathrm{Young}(\lambda)\to\mathbb{Z}_{\ge0}$, called the <strong>arm length</strong>, <strong>leg length</strong>, and <strong>hook length</strong>, respectively, which act on cells in the Young diagram of $\lambda$ as follows:</p>
+
+<p>$$ a_{\lambda}(i,j):=\lambda_i - j $$
+$$ l_{\lambda}(i,j):=\lambda&rsquo;_j - i $$
+$$ h_{\lambda}(i,j):= a_{\lambda}(i,j) + l_{\lambda}(i,j) + 1 $$</p>
+
+<p>where $\lambda&rsquo;$ is the <a href="#conjugation">conjugate</a> partition to $\lambda$.</p>
+
+<p>For $\lambda = (6,3,1)$, $s = (1,3)\in \mathrm{Young}(\lambda)$ as above, we find that $a_{\lambda}(s) = 6 - 3 = 3$, $l_{\lambda}(s) = 2 - 1 = 1$, $h_{\lambda}(s) = 3 + 1 + 1 = 5$.</p>
+
+<p>As their names suggest, the functions $a_{\lambda},l_{\lambda},h_{\lambda}$ count the number of cells in the arm, leg, and hook of a cell, respectively, that is $a_{\lambda}(i,j)=|\mathrm{arm}_{\lambda}(i,j)|$, $l_{\lambda}(i,j)=|\mathrm{leg}_{\lambda}(i,j)|$, and $h_{\lambda}(i,j)=|\mathrm{hook}_{\lambda}(i,j)|$. In principle the functions $a_{\lambda},l_{\lambda},h_{\lambda}$ could be extended to the lattice $(\mathbb{Z}_{\ge0})^{2}\to\mathbb{Z}$ using the fact that $\lambda(i)=0$ for $i&gt;\mathrm{length}(\lambda)$.</p>
+
+<h4 id="table-of-functions">Table of functions</h4>
+
+<p>In the table below we recap the definitions from this subsection along with their implementations as methods for the <code>Partition</code> class in SageMath, as well as introducing a few other functions in passing. At this point we only remark that the functions for $\alpha$-<strong>upper hook length</strong> and $\alpha$-<strong>lower hook length</strong> are simply generalisations of the classical hook length discussed above and coincide when $\alpha=1$.</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">Math notation</th>
+<th align="center">SageMath method</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">$\mathrm{arm}_{\lambda}(i,j)$</td>
+<td align="center"><code>arm_cells(i,j)</code></td>
+<td align="center">$\{(i,y):j &lt; y \le \lambda_i\}$</td>
+</tr>
+
+<tr>
+<td align="center">$\mathrm{leg}_{\lambda}(i,j)$</td>
+<td align="center"><code>leg_cells(i,j)</code></td>
+<td align="center">$\{(x,j):i &lt; x \le \lambda&rsquo;_j\}$</td>
+</tr>
+
+<tr>
+<td align="center">$\mathrm{hook}_{\lambda}(i,j)$</td>
+<td align="center"><code>hook_cells(i,j)</code></td>
+<td align="center">$\mathrm{arm}_{\lambda}(i,j)\cup\mathrm{leg}_{\lambda}(i,j)\cup\{(i,j)\}$</td>
+</tr>
+
+<tr>
+<td align="center">$a_{\lambda}(i,j)$</td>
+<td align="center"><code>arm_length(i,j)</code></td>
+<td align="center">$\lambda_i - j = |\mathrm{arm}_{\lambda}(i,j)|$</td>
+</tr>
+
+<tr>
+<td align="center">$l_{\lambda}(i,j)$</td>
+<td align="center"><code>leg_length(i,j)</code></td>
+<td align="center">$\lambda&rsquo;_j - i = |\mathrm{leg}_{\lambda}(i,j)|$</td>
+</tr>
+
+<tr>
+<td align="center">$h_{\lambda}(i,j)$</td>
+<td align="center"><code>hook_length(i,j)</code></td>
+<td align="center">$a_{\lambda}(i,j) + l_{\lambda}(i,j) + 1 = |\mathrm{hook}_{\lambda}(i,j)|$</td>
+</tr>
+
+<tr>
+<td align="center">$\mathrm{Graph}(a_{\lambda})$</td>
+<td align="center"><code>arm_lengths()</code></td>
+<td align="center">A Young tableau of $\lambda$ with cells filled in with their arm lengths</td>
+</tr>
+
+<tr>
+<td align="center">$\mathrm{Graph}(l_{\lambda})$</td>
+<td align="center"><code>leg_lengths()</code></td>
+<td align="center">A Young tableau of $\lambda$ with cells filled in with their leg lengths</td>
+</tr>
+
+<tr>
+<td align="center">$\mathrm{Graph}(h_{\lambda})$</td>
+<td align="center"><code>hook_lengths()</code></td>
+<td align="center">A Young tableau of $\lambda$ with cells filled in with their hook lengths</td>
+</tr>
+
+<tr>
+<td align="center">$h^{\ast}_{\lambda}(i,j;\alpha)$</td>
+<td align="center"><code>upper_hook(i,j,alpha)</code></td>
+<td align="center">$\lambda^{\prime}_j - i + \alpha(\lambda_i - j + 1) = l_{\lambda}(i,j) + \alpha(a_{\lambda}(i,j) + 1)$</td>
+</tr>
+
+<tr>
+<td align="center">$h_{\ast}^{\lambda}(i,j;\alpha)$</td>
+<td align="center"><code>lower_hook(i,j,alpha)</code></td>
+<td align="center">$\lambda^{\prime}_j - i + 1 + \alpha(\lambda_i - j) = l_{\lambda}(i,j) + 1 + \alpha\cdot a_{\lambda}(i,j)$</td>
+</tr>
+
+<tr>
+<td align="center">$\mathrm{Graph}(h^{\ast}_{\lambda}(\cdot;\alpha))$</td>
+<td align="center"><code>upper_hook_lengths()</code></td>
+<td align="center">Tableau of $\lambda$ with cells filled in with their $\alpha$-upper hook lengths</td>
+</tr>
+
+<tr>
+<td align="center">$\mathrm{Graph}(h_{\ast}^{\lambda}(\cdot;\alpha))$</td>
+<td align="center"><code>lower_hook_lengths()</code></td>
+<td align="center">Tableau of $\lambda$ with cells filled in with their $\alpha$-lower hook lengths</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code class="language-python">mu = Partition([6,3,1])
+mu.arm_cells(0,2) # Indices are zero-based
+# [(0, 3), (0, 4), (0, 5)]
+mu.leg_length(0,2) # Check above example
+# 1
+mu.hook_lengths() # Returns a list of lists
+# [[8, 6, 5, 3, 2, 1], [4, 2, 1], [1]]
+</code></pre>
+
+<p>You can practice executing SageMath and Python code in the SageMathCell below.</p>
+
+<div class="sage">
+  <script type="text/x-sage">
+mu = Partition([6,3,1]) # You can edit this code yourself
+print(type(mu.ferrers_diagram()))
+mu.pp()
+print(Partition([5,5,3,2,1]).conjugate())
+print(conjugate(Partition([5,5,3,2,1])))
+print(type(Partition([5,5,3,2,1]).conjugate()))
+print(type(conjugate(Partition([5,5,3,2,1]))))
+  </script>
+</div>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/tutorial-partitions/js/clipboard.min.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/perfect-scrollbar.min.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/perfect-scrollbar.jquery.min.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/jquery.sticky.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/featherlight.min.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/highlight.pack.js?1593465865"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/tutorial-partitions/js/modernizr.custom-3.6.0.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/learn.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/hugo-learn.js?1593465865"></script>
+
+    <link href="/tutorial-partitions/mermaid/mermaid.css?1593465865" rel="stylesheet" />
+    <script src="/tutorial-partitions/mermaid/mermaid.js?1593465865"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>

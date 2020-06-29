@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.55.0" />
+    <meta name="description" content="Integer Partitions Tutorial">
+<meta name="author" content="Edward Pearce">
+
+    <link rel="icon" href="/tutorial-partitions/img/favicon.png" type="image/png">
+
+    <title>Notation :: Integer Partitions Tutorial - Edward Pearce</title>
+
+    
+    <link href="/tutorial-partitions/css/nucleus.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/fontawesome-all.min.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/hybrid.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/featherlight.min.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/perfect-scrollbar.min.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/auto-complete.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/atom-one-dark-reasonable.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/theme.css?1593465865" rel="stylesheet">
+    <link href="/tutorial-partitions/css/hugo-theme.css?1593465865" rel="stylesheet">
+    
+    
+
+    <script src="/tutorial-partitions/js/jquery-3.3.1.min.js?1593465865"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+<script type="text/javascript" async
+  src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]} })
+</script>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+  </head>
+  <body class="" data-url="/tutorial-partitions/intro/notation/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://edwardmpearce.github.io/tutorial-partitions/">
+  <img id="logo" src="/tutorial-partitions/img/logo-crop.png" alt="Partition" style="width:100%; height:100%;" type="image/png"></img>
+</a>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/tutorial-partitions/js/lunr.min.js?1593465865"></script>
+<script type="text/javascript" src="/tutorial-partitions/js/auto-complete.js?1593465865"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/edwardmpearce.github.io\/tutorial-partitions\/";
+    
+</script>
+<script type="text/javascript" src="/tutorial-partitions/js/search.js?1593465865"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/" title="Introduction" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/tutorial-partitions/intro/">
+          <b>1. </b>Introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/basics/" title="Basics" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tutorial-partitions/intro/basics/">
+          Basics
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/visualization/" title="Visualization" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tutorial-partitions/intro/visualization/">
+          Visualization
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/visualization/conventions/" title="Diagram conventions" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tutorial-partitions/intro/visualization/conventions/">
+          Diagram conventions
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/notation/" title="Notation" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/tutorial-partitions/intro/notation/">
+          Notation
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorial-partitions/intro/statistics/" title="Statistics" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tutorial-partitions/intro/statistics/">
+          Statistics
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/edwardmpearce/tutorial-partitions/"><i class='fab fa-github'></i> Github repo</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://edwardmpearce.github.io/"><i class='fas fa-bullhorn'></i> Credits</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=R226X2KQPU564&amp;currency_code=GBP&amp;source=url"><i class='fas fa-heart'></i> Donate</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <center>
+    
+    <a class="github-button" href="https://github.com/edwardmpearce/tutorial-partitions/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download matcornic/hugo-theme-learn on GitHub">Download</a>
+
+    
+    <a class="github-button" href="https://github.com/edwardmpearce/tutorial-partitions" data-icon="octicon-star" data-show-count="true" aria-label="Star matcornic/hugo-theme-learn on GitHub">Star</a>
+
+    
+    <a class="github-button" href="https://github.com/edwardmpearce/tutorial-partitions/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork matcornic/hugo-theme-learn on GitHub">Fork</a>
+
+    <p>Built with <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/matcornic/hugo-theme-learn">Learn theme</a></p>
+	
+	<p>Copyright &copy; Edward Pearce 2020</p>
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/edwardmpearce/tutorial-partitions/edit/master/content/intro/notation/_index.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/tutorial-partitions/'>Integer Partitions Tutorial</a> > <a href='/tutorial-partitions/intro/'>Introduction</a> > Notation
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#alternative-notation">Alternative notation</a>
+<ul>
+<li><a href="#exponential-notation">Exponential notation</a></li>
+<li><a href="#frobenius-coordinates">Frobenius Coordinates</a></li>
+<li><a href="#maya-diagrams-zero-one-sequences-and-dyck-words">Maya diagrams, zero-one sequences, and Dyck words</a>
+<ul>
+<li><a href="#minimal-zero-one-sequences">Minimal zero-one sequences</a></li>
+<li><a href="#dyck-words">Dyck words</a></li>
+<li><a href="#states">States</a></li>
+<li><a href="#zero-one-sequences">Zero-one sequences</a></li>
+</ul></li>
+<li><a href="#beta-numbers">Beta numbers</a></li>
+</ul></li>
+<li><a href="#interchanging-between-notations">Interchanging between notations</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Notation
+            </h1>
+          
+
+        
+
+
+
+	
+
+<h2 id="alternative-notation">Alternative notation</h2>
+
+<p>Besides thinking of partitions as a sequence of summands (parts), we may encode the data in a handful of other ways. This can be useful for computation, compactness, or for realizing the appearance of partitions in other areas of mathematics and beyond.</p>
+
+<p>In fact, the cycle of discovery often begins with mathematicians studying an object of interest in their own field, only later realizing that after a little bit of manipulation the problem at hand can also be viewed in terms of partitions.</p>
+
+<h3 id="exponential-notation">Exponential notation</h3>
+
+<p>The most simple alternative to describing a partition $\lambda$ by listing its parts $\lambda_{j}$ is <strong>exponential notation</strong>, where instead we count the number of parts of size $i$ appearing in $\lambda$ for each positive integer $i$, that is $\alpha_{i}=|\{j\in\mathbb{Z}_{&gt;0}|\lambda(j)=i\}|$, to form a finite sequence of nonnegative integers $\exp(\lambda):\mathbb{Z}_{&gt;0}\to\mathbb{Z}_{\ge0}$ given by $\exp(\lambda)(i):=\alpha_{i}$.</p>
+
+<p>We usually write this as $\lambda=1^{\alpha_{1}}2^{\alpha_{2}}3^{\alpha_{3}}\ldots\lambda_{1}^{\alpha_{\lambda_{1}}}$ where $\lambda_{1}=\max\{i\in\mathbb{Z}_{&gt;0}|\alpha_{\lambda}(i)\ne0\}$ is called the <strong>largest part</strong> in $\lambda$, but may also directly write $\exp(\lambda)=(\alpha_{1},\alpha_{2},\alpha_{3},\ldots,\alpha_{\lambda_{1}})$. For example:</p>
+
+<p><img src="/tutorial-partitions/img/exponential_notation.png" alt="Exponential notation" /></p>
+
+<p>We can obtain the exponential notation for a given partition in SageMath using the <code>to_exp()</code> method, and we can construct a partition from its exponential form using the <code>exp</code> keyword argument in the constructor.</p>
+
+<pre><code class="language-python">Partition([6,4,4,2,1]).to_exp()
+# [1, 1, 0, 2, 0, 1]
+Partition(exp=[1,1,0,2,0,1])
+# [6, 4, 4, 2, 1]
+</code></pre>
+
+<h3 id="frobenius-coordinates">Frobenius Coordinates</h3>
+
+<p>The <strong>Frobenius rank</strong> of a partition $\lambda$ is given by the number of cells on the main diagonal of $\lambda$, and formally defined to be $\max\{i\in\mathbb{Z}_{&gt;0}:\lambda_{i}\ge i\}$. This is also equal to the length of the largest square fitting into the Young diagram of $\lambda$. For example, the Frobenius rank of the partition $\lambda = (6,4,4,2,1)$ is $3$.</p>
+
+<p><img src="/tutorial-partitions/img/frobenius_rank.png" alt="Frobenius rank" /></p>
+
+<p>We can obtain the Frobenius rank for a given partition in SageMath using the <code>frobenius_rank()</code> method.</p>
+
+<p>The <strong>Frobenius coordinates</strong> of a partition $\lambda$ of Frobenius rank $r$ is a pair of length-$r$ integer-valued vectors $p,q$ given by listing the <a href="../visualization/#arms-legs-and-hooks">arm and leg</a> statistics, respectively, of the cells along the main diagonal in $\lambda$. That is, for $i=1,2,\ldots,r$</p>
+
+<p>$$p_{i}=a_{\lambda}(i,i),q_{i}=l_{\lambda}(i,i).$$</p>
+
+<p>For example, the diagram below illustrates how to obtain the Frobenius coordinates $p=(5,2,1)$, $q=(4,2,0)$ from the partition $\lambda = (6,4,4,2,1)$:</p>
+
+<p><img src="/tutorial-partitions/img/frobenius_coordinates.png" alt="Frobenius coordinates" /></p>
+
+<p>We can obtain the Frobenius coordinates for a given partition in SageMath using the <code>frobenius_coordinates()</code> method, and we can also construct a partition using the <code>frobenius_coordinates</code> keyword argument in the constructor.</p>
+
+<pre><code class="language-python">Partition([6,4,4,2,1]).frobenius_coordinates()
+# ([5, 2, 1], [4, 2, 0])
+Partition(frobenius_coordinates=([5, 2, 1], [4, 2, 0]))
+# [6,4,4,2,1]
+</code></pre>
+
+<p>Notice that if a partition $\lambda$ has Frobenius rank $r$, then for $i=1,2,\ldots,r-1$, its Frobenius coordinates $p,q$ must satisfy $p_{i+1}\le p_{i}-1$, and $q_{i+1}\le q_{i}-1$. That is to say, the Frobenius coordinates consist of strictly decreasing integer sequences of finite length.</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+        
+        Proof
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>Let $\lambda$ be a partition, so $\lambda_{i} - \lambda_{i+1} \ge 0$. Therefore</p>
+
+<p>$$ p_{i+1} - p_{i} = a_{\lambda}(i,i) - a_{\lambda}(i+1,i+1) = \lambda_{i}-i - (\lambda_{i+1}-(i+1)) = \lambda_{i} - \lambda_{i+1} + 1 \ge 1.$$</p>
+
+<p>Thus $p_{i+1} - p_{i} \ge 1$ and $p_{i+1}\le p_{i}-1$ as required. The proof is analogous for $q$ noting that the conjugate $\lambda&rsquo;$ is also a partition.</p>
+
+    </div>
+</div>
+
+<p>If the Frobenius coordinates of a partition $\lambda$ is given by the pair $(p,q)\in\mathbb{Z}_{\ge0}^{r}\times\mathbb{Z}_{\ge0}^{r}$, then the Frobenius coordinates of its conjugate $\lambda&rsquo;$ are given by the pair $(q,p)$. This follows from the deduction that $a_{\lambda&rsquo;}(i,j)=l_{\lambda}(j,i)$, which we apply to the special case $i=j$, along with  the bijection $\mathrm{Young}(\lambda)\to\mathrm{Young}(\lambda&rsquo;)$ given by $(i,j)\mapsto(j,i)$ mentioned <a href="../visualization/#cells">earlier</a>.</p>
+
+<h3 id="maya-diagrams-zero-one-sequences-and-dyck-words">Maya diagrams, zero-one sequences, and Dyck words</h3>
+
+<p>In this section we introduce Maya diagrams, and explain their connection to partitions, Dyck paths from combinatorics, and the physical model known as &ldquo;Dirac&rsquo;s electron sea&rdquo;.</p>
+
+<p>Maya diagrams are used to visualize binary sequences of zeros and ones, and the two states 0 and 1 can be used to represent a wide range of paired notions, such as two directions when traversing a binary tree, two vectors in a basis of a 2D lattice, or a pair of oppositely charged particles (e.g. electrons and positrons).</p>
+
+<h4 id="minimal-zero-one-sequences">Minimal zero-one sequences</h4>
+
+<p>We begin by explaining the <code>zero_one_sequence()</code> <a href="https://doc.sagemath.org/html/en/reference/combinat/sage/combinat/partition.html#sage.combinat.partition.Partition.zero_one_sequence" target="_blank">method</a> for partitions in SageMath. We draw the Young diagram of a partition in <a href="../visualization/conventions/">English notation</a> and label edges on its outer rim/boundary path according to the rule North=0 and East=1, and then read this 0-1 sequence from $(0, -\infty)$ to $(+\infty, 0)$ so that part size increases as we read along the boundary path.</p>
+
+<p>Though such a sequence starts with infinitely many 0s and end with infinitely many 1s, the <code>zero_one_sequence()</code> method omits these to return a finite output, describing only the edges on the boundary of the Young diagram which do not lie on the axes. This may be called the <em>minimal</em> 0-1 sequence of a partition.</p>
+
+<p>Below we illustrate how to obtain the minimal zero-one sequence $(1,0,1,1,0,1,1,1,0)$ from the partition $\lambda=(6,3,1)$:</p>
+
+<p><img src="/tutorial-partitions/img/zero_one_sequence.png" alt="Zero-one sequence" /></p>
+
+<p>We can obtain the minimal zero-one sequence of a given partition in SageMath using the <code>zero_one_sequence()</code> method, and we can also construct a partition using the <code>zero_one</code> keyword argument in the constructor.</p>
+
+<pre><code class="language-python">Partition([6,3,1]).zero_one_sequence()
+# [1, 0, 1, 1, 0, 1, 1, 1, 0]
+Partition(zero_one=[1,0,1,1,0,1,1,1,0]) # Same as Partitions().from_zero_one([1,0,1,1,0,1,1,1,0])
+# [6,3,1]
+</code></pre>
+
+<p>This leads to reading boundary paths from right to left in Russian and Cartesian notations.</p>
+
+<h4 id="dyck-words">Dyck words</h4>
+
+<p>Next we explain the <code>to_dyck_word()</code> <a href="https://doc.sagemath.org/html/en/reference/combinat/sage/combinat/partition.html#sage.combinat.partition.Partition.to_dyck_word" target="_blank">method</a> for partitions in SageMath. We draw the Young diagram of a partition in <a href="../visualization/conventions/">English notation</a> and label edges on its outer rim/boundary path according to the rule North=1 and East=0, and then read this 0-1 sequence from $(0, -\infty)$ to $(+\infty, 0)$ so that part size increases as we read along the boundary path.</p>
+
+<p>We will begin with an illustration of how to obtain the Maya diagram corresponding to a given partition before discussing the formal definitions and details. Just as with Young diagrams, Maya diagrams are also subject to choices of convention for how they relate to a particular partition, but for our purposes, we will fix the following convention:</p>
+
+<p>We can obtain the Dyck word associated to a given partition in SageMath using the <code>to_dyck_word()</code> method, and we can also recover the partition from its Dyck word using the <code>to_partition()</code> method.</p>
+
+<pre><code class="language-python">Partition([6,3,1]).to_dyck_word()
+# 
+Partition([6,3,1]).to_dyck_word(10)
+# 
+Partition([6,3,1]).to_dyck_word().to_partition()
+# [6,3,1]
+</code></pre>
+
+<h4 id="states">States</h4>
+
+<p>Consider the set of integers $\mathbb{Z}$ as the disjoint union $\mathbb{Z}=\mathbb{\mathbb{Z}}_{&lt;0}\sqcup\mathbb{Z}_{\ge0}$ of the negative integers $\mathbb{Z}_{&lt;0}$ and the nonnegative integers $\mathbb{Z}_{\ge0}$. We define a <strong>state</strong> to be a subset $S\subset\mathbb{Z}$ such that the symmetric difference $S\Delta\mathbb{Z}_{\ge0}$ is finite. That is, for $S^{C}:=\mathbb{Z}\setminus S=\{n\in\mathbb{Z}|n\notin S\}$</p>
+
+<p>$$
+S\Delta\mathbb{Z}_{\ge0}=(S\setminus\mathbb{Z}_{\ge0})\sqcup(\mathbb{Z}_{\ge0}\setminus S)=(S\cap\mathbb{Z}_{&lt;0})\sqcup(S^{C}\cap\mathbb{Z}_{\ge0})\,\text{finite.}
+$$</p>
+
+<p>We may identify a state $S\subset\mathbb{Z}$ with the pair of (necessarily) finite sets $(S\cap\mathbb{Z}_{&lt;0})$ and $(S^{C}\cap\mathbb{Z}_{\ge0})$ by the bijection between</p>
+
+<p>$$
+\{S\subset\mathbb{Z}|S\Delta\mathbb{Z}_{\ge0}\,\text{finite}\} \leftrightarrow \{(A,B)|A\subset\mathbb{Z}_{\ge0}\,\text{finite},B\subset\mathbb{Z}_{&lt;0}\,\text{finite}\}
+$$</p>
+
+<p>given by $S\mapsto(S^{C}\cap\mathbb{Z}_{\ge0}$, $S\cap\mathbb{Z}_{&lt;0})$, with inverse given by $(A,B)\mapsto A^{C}\cap(B\cup\mathbb{Z}_{\ge0})$.</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+        
+        Proof
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>For $S\subset\mathbb{Z}$ such that $S\Delta\mathbb{Z}_{\ge0}$ is finite, let $(A,B):=(S^{C}\cap\mathbb{Z}_{\ge0},S\cap\mathbb{Z}_{&lt;0})$, then $A\subset\mathbb{Z}_{\ge0}$, $B\subset\mathbb{Z}_{&lt;0}$, and $S\Delta\mathbb{Z}_{\ge0}=A\sqcup B$, so $A$, $B$ must both be finite. Moreover,</p>
+
+<p>$$ A^{C}\cap(B\cup\mathbb{Z}_{\ge0}) = (S^{C}\cap\mathbb{Z}_{\ge0})^{C}\cap((S\cap\mathbb{Z}_{&lt;0})\cup\mathbb{Z}_{\ge0}) $$
+$$ = (S\cup\mathbb{Z}_{&lt;0})\cap((S\cup\mathbb{Z}_{\ge0})\cap(\mathbb{\mathbb{Z}}_{&lt;0}\cup\mathbb{Z}_{\ge0})) $$
+$$ = (S\cup\emptyset)\cap\mathbb{Z}=S $$</p>
+
+<p>by De Morgan&rsquo;s laws and associativity and distributativity properties of union and intersection.</p>
+
+<p>On the other hand, for finite subsets $A\subset\mathbb{Z}_{\ge0}$, $B\subset\mathbb{Z}_{&lt;0}$, let $S=A^{C}\cap(B\cup\mathbb{Z}_{\ge0})$, then $S^{C}=A\cup(B^{C}\cap\mathbb{Z}_{&lt;0})$, and so</p>
+
+<p>$$ S^{C}\cap\mathbb{Z}_{\ge0} = (A\cup(B^{C}\cap\mathbb{Z}_{&lt;0}))\cap\mathbb{Z}_{\ge0} $$
+$$ = (A\cap\mathbb{Z}_{\ge0})\cup((B^{C}\cap\mathbb{Z}_{&lt;0})\cap\mathbb{Z}_{\ge0}) $$
+$$ = A\cup\emptyset=A $$</p>
+
+<p>as $A\subset\mathbb{Z}_{\ge0}$, and also</p>
+
+<p>$$ S\cap\mathbb{Z}_{&lt;0} = (A^{C}\cap(B\cup\mathbb{Z}_{\ge0}))\cap\mathbb{Z}_{&lt;0} $$
+$$ = (A\cap\mathbb{Z}_{&lt;0}\cap B)\cup(A\cap\mathbb{Z}_{&lt;0}\cap\mathbb{Z}_{\ge0}) $$
+$$ = A\cap\mathbb{Z}_{&lt;0}\cap B=B $$</p>
+
+<p>as $B\subset\mathbb{Z}_{&lt;0}=(\mathbb{Z}_{\ge0})^{C}\subset A^{C}$, as $A\subset\mathbb{Z}_{\ge0}$. Therefore $S\Delta\mathbb{Z}_{\ge0}=(S^{C}\cap\mathbb{Z}_{\ge0})\sqcup(S\cap\mathbb{Z}_{&lt;0})=A\sqcup B$ is finite.</p>
+
+    </div>
+</div>
+
+<h4 id="zero-one-sequences">Zero-one sequences</h4>
+
+<p>A <strong>Maya diagram</strong> is a function $\mathrm{\boldsymbol{m}}:\mathbb{Z}\to\{0,1\}$ such that there exist $N,M\in\mathbb{Z}$ such that for all $\nu&gt;N$ we have $\boldsymbol{\mathrm{m}}(\nu)=1$ and for all $\nu&lt;M$ we have $\boldsymbol{\mathrm{m}}(\nu)=0$. It follows that $M\le N+1$.</p>
+
+<p>Let $S\subset\mathbb{Z}$ be a state, then its identity function $\mathbb{1}_{S}:\mathbb{Z}\to\{0,1\}$,</p>
+
+<p>$$\mathbb{1}_{S}(\nu) = \begin{cases} 1 &amp; \nu\in S\\ 0 &amp; \nu\notin S \end{cases}$$</p>
+
+<p>is a Maya diagram, where we may take $N=\max(S^{C}\cap\mathbb{Z}_{\ge0})$, $M=\min(S\cap\mathbb{Z}_{&lt;0})\in\mathbb{Z}$.</p>
+
+<p>On the other hand, for a Maya diagram $\mathrm{\boldsymbol{m}}:\mathbb{Z}\to\{0,1\}$ we may define a state $S=\boldsymbol{\mathrm{m}}^{-1}(1)=\{\nu\in\mathbb{Z}|\boldsymbol{\mathrm{m}}(\nu)=1\}$, in which case</p>
+
+<p>$$ |S\cap\mathbb{Z}_{&lt;0}|=|\{\nu\in\mathbb{Z}_{&lt;0}|\mathrm{\boldsymbol{m}}(\nu)=1\}|\le\max(0,-M) $$</p>
+
+<p>and</p>
+
+<p>$$ |S^{C}\cap\mathbb{Z}_{\ge0}|=|\{\nu\in\mathbb{Z}_{\ge0}|\boldsymbol{\mathrm{m}}(\nu)=0\}|\le\max(0,N+1).$$</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+        
+        Proof
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>Let $\mathrm{\boldsymbol{m}}:\mathbb{Z}\to\{0,1\}$ be a Maya diagram such that $\boldsymbol{\mathrm{m}}(\nu)=1$ for all $\nu&gt;N$, and $\boldsymbol{\mathrm{m}}(\nu)=0$ for all $\nu&lt;M$. Let $S=\boldsymbol{\mathrm{m}}^{-1}(1)=\{\nu\in\mathbb{Z}|\boldsymbol{\mathrm{m}}(\nu)=1\}$. Then</p>
+
+<p>$$ S\cap\mathbb{Z}_{&lt;0} = \{\nu\in\mathbb{Z}_{&lt;0}|\mathrm{\boldsymbol{m}}(\nu)=1\} \subset \{\nu\in\mathbb{Z}|M\le\nu&lt;0\} $$</p>
+
+<p>and</p>
+
+<p>$$ S^{C}\cap\mathbb{Z}_{\ge0} = \{\nu\in\mathbb{Z}_{\ge0}|\boldsymbol{\mathrm{m}}(\nu)=0\} \subset \{\nu\in\mathbb{Z}|0\le\nu\le N\}. $$</p>
+
+    </div>
+</div>
+
+<p>We define the <strong>charge</strong> of a Maya diagram/state to be the difference</p>
+
+<p>$$ \mathrm{charge}(S)=|S^{C}\cap\mathbb{Z}_{\ge0}|-|S\cap\mathbb{Z}_{&lt;0}|=|\boldsymbol{\mathrm{m}}^{-1}(0)\cap\mathbb{Z}_{\ge0}|-|\boldsymbol{\mathrm{m}}^{-1}(1)\cap\mathbb{Z}_{&lt;0}|.$$</p>
+
+<h3 id="beta-numbers">Beta numbers</h3>
+
+<p>Beta numbers have applications in Representation theory.</p>
+
+<h2 id="interchanging-between-notations">Interchanging between notations</h2>
+
+<p>We can prove that these notations are equivalent and that we can freely interchange between them, i.e. that the set of partitions is in bijection with the set of e.g. Frobenius coordinates</p>
+
+<p>We also demonstrate and explain how these have been implemented in SageMath</p>
+
+<pre><code class="language-python"># Insert code here
+</code></pre>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/tutorial-partitions/js/clipboard.min.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/perfect-scrollbar.min.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/perfect-scrollbar.jquery.min.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/jquery.sticky.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/featherlight.min.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/highlight.pack.js?1593465865"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/tutorial-partitions/js/modernizr.custom-3.6.0.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/learn.js?1593465865"></script>
+    <script src="/tutorial-partitions/js/hugo-learn.js?1593465865"></script>
+
+    <link href="/tutorial-partitions/mermaid/mermaid.css?1593465865" rel="stylesheet" />
+    <script src="/tutorial-partitions/mermaid/mermaid.js?1593465865"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
